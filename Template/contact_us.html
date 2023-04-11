@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../CSS/style.css">
+   <title>Contact us</title>
+   <style>
+      body {
+         font-family: Arial, Helvetica, sans-serif;
+      }
+
+      * {
+         box-sizing: border-box;
+      }
+
+      table {
+         margin-left: 2%;
+         margin-top: 20px;
+         float: left;
+         background-color: #f2f2f2;
+         margin-bottom: 5em;
+      }
+
+      input[type=text],
+      select,
+      textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         resize: vertical;
+      }
+
+      .button {
+         background-color: #04AA6D;
+         color: white;
+         padding: 12px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+      }
+
+      .button:hover {
+         background-color: #45a049;
+      }
+
+      .container {
+         border-radius: 5px;
+         background-color: #f2f2f2;
+         padding: 20px;
+         margin-left: 5%;
+         margin-right: 5%;
+         width: 90%;
+         clear: both;
+      }
+   </style>
+</head>
+
+<body>
+   <main>
+      <header>
+         <div class="navigation-bar">
+            <div class="company-logo">
+               <a href="Home_page.html"><img id="logo" src="../Images/Logo.jfif"></a>
+            </div>
+            <nav class="nav-mobile">
+               <a href="Home_page.html">Home &nbsp;</a>
+               <a href="checkout.html">My cart &nbsp;</a>
+            </nav>
+            <nav class="nav-tab">
+               <ul>
+                  <li><a href="Home_page.html">Home</a></li>
+                  <li><a href="grocery.html">Products</a></li>
+                  <li><a href="about_us.html">About Us</a></li>
+                  <li><a href="contact_us.html">Get in Touch</a></li>
+                  <li><a href="checkout.html">My cart</a></li>
+               </ul>
+            </nav>
+         </div>
+      </header>
+      <table>
+         <tr>
+            <td id="form_col" style="vertical-align: top" rowspan="2">
+               <div class="container">
+                  <h3>Contact Us</h3>
+                  <form action="mailto:smirsohail@gmail.com" method="post">
+                     <table>
+                        <tr>
+                           <td>
+                              <label for="fname">First Name</label>
+                              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                           </td>
+                           <td>
+                              <label for="lname">Last Name</label>
+                              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2"><label for="lname">Email</label>
+                              <input type="text" id="email" name="email" placeholder="Your Email..">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2"><label for="lname">Phone Number</label>
+                              <input type="text" id="phone" name="phone" placeholder="Your Phone Number..">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td colspan="2"><label for="subject">Subject</label>
+                              <textarea id="subject" name="subject" placeholder="Write something.."
+                                 style="height:200px"></textarea>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <input class="button" type="submit" value="Submit">
+                           </td>
+                           <td>
+                              <input class="button" type="reset" value="Reset">
+                           </td>
+                        </tr>
+                     </table>
+                  </form>
+               </div>
+            </td>
+         </tr>
+      </table>
+      <div class="store-map">
+         <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119116.9681801619!2d-79.35858594846728!3d43.786726735421446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d796f84bffff%3A0x42949d1bb061b076!2sFresh%20Veggies%20Fruits!5e0!3m2!1sen!2sca!4v1671046289193!5m2!1sen!2sca"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" />
+      </div>
+   </main>
+
+   <footer class="footer_all">
+      <hr id="footer_hr">
+      <div class="Page_footer">
+         <ul type="none" margin=0;>
+            <li><a href="Home_page.html">Home</a></li>
+            <li><a href="grocery.html">Products</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+            <li><a href="https://www.instagram.com/_what_aye_see_/">Follow us on <img src="../Images/About_us/inst.png"
+                     style="margin-bottom:-4px;"></a></li>
+            <li><a href="#">&copy; Image Credits : <u>iStock.com</u> and <u>schoolproject.com</u> </a></li>
+         </ul>
+      </div>
+   </footer>
+
+</body>
+
+</html>

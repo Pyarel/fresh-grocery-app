@@ -1,0 +1,208 @@
+/* For checkout Page */
+.checkout-banner {
+  width: 100%;
+  height: 5em;
+}
+
+/* Style for cart */
+.cart {
+  margin-left: 20px;
+  width: 55%;
+  height: 50em;
+  display: inline-block;
+  margin-top: 1em;
+}
+.cart h2 {
+  margin-top: 0;
+}
+/* Style for table */
+table {
+  width: 90%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #e7e8b2;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid #e7e8b2;
+  padding: 25px;
+  vertical-align: middle;
+  text-align: center;
+}
+td img {
+  width: 30%;
+  float: left;
+}
+td p {
+  margin-top: 30px;
+}
+tfoot td {
+  font-weight: bold;
+}
+/* Style for add items button  */
+.add-items {
+  margin-top: 2em;
+  margin-left: 30em;
+  padding: 15px;
+  width: 20%;
+  background-color: #5f861f;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #5f861f;
+}
+
+/* Style for checkout form */
+.checkout {
+  width: 40%;
+  height: 50em;
+  display: inline-block;
+  float: right;
+  margin-top: 1em;
+}
+
+/* Style for the form */
+form {
+  width: 80%;
+  text-align: left;
+  padding: 15px 25px 25px 25px;
+  border: 3px solid #ffde59;
+}
+label,
+input {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+input {
+  width: 70%;
+  padding: 5px;
+}
+
+sup {
+  color: red;
+}
+.submit {
+  background-color: #ff9e01;
+  border: 1px solid #ff9e01;
+  width: 40%;
+  margin-top: 20px;
+}
+
+/* Media Query for mobile */
+@media screen and (max-width: 480px) {
+  /* Style for checkout banner */
+  .checkout-banner {
+    display: none;
+    visibility: hidden;
+  }
+  /* Style for cart */
+  .cart {
+    width: 100%;
+    height: 35em;
+    float: none;
+    display: block;
+  }
+
+  th,
+  td {
+    padding: 15px;
+  }
+  .add-items {
+    width: 30%;
+    margin-left: 20px;
+    padding: 10px;
+  }
+  /*Style for checkout*/
+  .checkout {
+    width: 100%;
+    display: block;
+    float: none;
+    margin-top: 0;
+    margin-left: 25px;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  /* Style for checkout banner */
+  .checkout-banner {
+    display: none;
+    visibility: hidden;
+  }
+  /* Style for cart */
+  .cart {
+    width: 100%;
+    height: 35em;
+    float: none;
+    display: block;
+  }
+
+  table {
+    width: 80%;
+  }
+  th,
+  td {
+    padding: 15px;
+  }
+  .add-items {
+    width: 30%;
+    margin-left: 20px;
+    padding: 10px;
+  }
+  /*Style for checkout*/
+  .checkout {
+    width: 100%;
+    display: block;
+    float: none;
+    margin-top: 0;
+    margin-left: 25px;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Style for cart */
+  .cart {
+    width: 80%;
+    height: 45em;
+    float: none;
+    display: block;
+    margin-left: 20px;
+  }
+
+  table {
+    width: 100%;
+    margin: auto;
+  }
+  th,
+  td {
+    padding: 15px;
+  }
+  .add-items {
+    width: 30%;
+    margin-left: 20px;
+    padding: 10px;
+  }
+  /*Style for checkout*/
+  .checkout {
+    width: 80%;
+    display: block;
+    float: none;
+    margin-top: 0;
+    margin-left: 25px;
+  }
+  form {
+    width: 90%;
+  }
+  input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,244 @@
+/* Colors */
+
+/* Orange #ff9e01
+   Green #5f861f
+   Yellow #ffde59
+*/
+
+/* Style for Categories - Mobile view */
+.categories-mobile {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid rgb(223, 215, 215);
+  border-radius: 10px;
+  box-shadow: 1px 1px rgb(223, 215, 215);
+}
+.categories-mobile a {
+  width: 30%;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: medium;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  /* background-color: rgb(72, 141, 72); */
+  background-color: #5f861f;
+  margin: 10px 10px 10px 25px;
+  border: 1px solid rgb(223, 215, 215);
+  border-radius: 10px;
+}
+.categories-mobile p {
+  margin: 0;
+}
+
+/* Style for Categories- Tab view */
+.categories {
+  display: none;
+  visibility: hidden;
+}
+/* Style for Category name */
+.category-name {
+  background-color: #ffde59;
+  margin: 0;
+}
+.category-name p {
+  padding: 10px;
+  margin: 10px 0 0 0;
+  font-weight: bold;
+}
+
+/* Style for products */
+.products {
+  display: block;
+  margin-top: 10px;
+  height: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+/* Style for each item */
+.item {
+  width: 37%;
+  border: 1px solid lightgray;
+  padding: 15px;
+  display: inline-block;
+  margin: 5px 5px;
+  background-color: #ffffff;
+}
+.item-name {
+  text-align: center;
+}
+.item-image img {
+  width: 100%;
+  height: 40%;
+}
+.item-price {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+.item-price sup {
+  font-size: 10px;
+}
+
+/* Style for small tabs */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  /* Categories Style for mobile view */
+  .categories-mobile {
+    display: inline-block;
+    visibility: visible;
+    width: 70%;
+    margin-left: 12%;
+    margin-right: 15%;
+  }
+  /* Style for each item */
+  .item {
+    width: 40%;
+  }
+  /* Style for .daily-deals */
+  .categories {
+    display: none;
+    visibility: hidden;
+  }
+}
+/* Style for tabs */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Categories Style for mobile view */
+  .categories-mobile {
+    display: inline-block;
+    visibility: visible;
+    width: 70%;
+    margin-left: 12%;
+    margin-right: 15%;
+  }
+  /* Style for each item */
+  .item {
+    width: 44%;
+  }
+  /* Style for .daily-deals */
+  .categories {
+    display: none;
+    visibility: hidden;
+  }
+}
+/* Style for desktop view */
+@media screen and (min-width: 1025px) {
+  /* Categories Style for mobile view */
+  .categories-mobile {
+    display: none;
+    visibility: hidden;
+  }
+  /* Categories Style for tab view */
+  .categories,
+  .offers {
+    display: inline-block;
+    visibility: visible;
+    width: 25%;
+    float: left;
+    margin-left: 20px;
+  }
+  .categories-tab {
+    visibility: visible;
+    display: inline-block;
+    width: 89%;
+    height: 28em;
+    margin-top: 2.5em;
+    background-color: #ffffff;
+    border: 1px solid rgb(223, 215, 215);
+    border-radius: 20px;
+    background-color: #5f861f;
+    float: left;
+  }
+  .categories-tab p {
+    padding: 25px 25px 15px 25px;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+  }
+  .categories-tab ul {
+    padding: 0;
+  }
+  .categories-tab li {
+    list-style-type: none;
+    padding: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #ffde59;
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+  .categories-tab a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    font-size: 16px;
+  }
+  .category-name p {
+    padding: 10px 35px;
+    color: #000000;
+  }
+  /* Style for products */
+  .products {
+    display: inline-block;
+    padding: 0;
+    width: 65%;
+    margin-top: 2.5em;
+    float: left;
+  }
+  /* Style for each item */
+  .item {
+    width: 15%;
+  }
+
+  /* Style for .daily-deals */
+  .daily-deals,
+  .daily_offers {
+    display: inline-block;
+    visibility: visible;
+    width: 89%;
+    height: 25em;
+    background-color: #5f861f;
+    border: 1px solid rgb(223, 215, 215);
+    margin-top: 2em;
+    float: left;
+    border-radius: 15px;
+  }
+
+  .daily-deals p,
+  .daily_offers p {
+    padding: 20px 20px 10px 20px;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+  }
+  .daily-deals li,
+  .daily_offers li {
+    list-style-type: none;
+    padding: 20px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #ffde59;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+  .daily-deals ul,
+  .daily_offers ul {
+    padding: 0;
+  }
+  .daily-deals img,
+  .daily_offers img {
+    width: 3em;
+
+    float: left;
+  }
+}
