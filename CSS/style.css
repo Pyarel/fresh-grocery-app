@@ -1,6 +1,7 @@
 body {
   font-family: "Anuphan", sans-serif;
   font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 
 /*
@@ -264,4 +265,39 @@ nav ul ul li {
 .text-highlight {
   font-family: "Schibsted Grotesk", sans-serif;
   font-weight: 700;
+}
+footer {
+  background-color: rgba(160, 240, 107, 0.6);
+  color: #000000;
+  margin: 0;
+}
+
+.content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 60px 0;
+  height: 150px;
+}
+.footer-links {
+  padding: 20px;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+}
+.footer-links ul {
+  align-items: center;
+  justify-content: center;
+}
+.footer-links li a {
+  color: #000;
+  text-decoration: none;
+  padding: 20px;
+}
+.brand-info,
+.store-info,
+.services {
+  flex-wrap: wrap;
+  width: 33%;
+  padding: 30px;
 }
