@@ -1,613 +1,258 @@
-/*
-oragne: #FF9E01
-green: #5F861F
-yellow: #FFDE59 */
-
 body {
-  margin: 0;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Poppins", sans-serif;
 }
-/* Style for header */
+
 header {
-  padding-top: 0;
 }
-.company-logo {
-  display: inline;
-}
-
-#logo {
-  border-radius: 50%;
-}
-
-body {
-  margin-bottom: 0px;
-  background: -webkit-linear-gradient(#ffffff, #fff2cc);
-  background: linear-gradient(#ffffff, #fff2cc);
-  height: 100%;
+/* Style for logo */
+.container {
   width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-h1 {
-  color: #000000;
-  text-decoration: none;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+img {
+  width: 100px;
+  height: 100px;
 }
-
-#home_page {
-  height: 100%;
+.brand-logo {
+  margin-left: 35px;
+  padding-left: 20px;
+}
+.search-container {
+  position: relative;
+  display: block;
+}
+form {
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 0px;
+  margin: auto;
+}
+input[type="search"] {
+  display: block;
+  margin: 0;
   width: 100%;
+  padding: 10px 46px 10px 26px;
+  border: 1px solid #f98675;
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  box-sizing: content-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #020000;
+}
+.search-btn {
+  width: 50px;
+  right: 0;
+  top: 0;
+  background: #f30e19;
+  color: #ffffff;
+  padding: 0 1em;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  float: none;
+  line-height: 1.5em;
+  transition: all 0.3s linear;
+}
+svg {
+  height: 25px;
+  width: 21px;
+  margin-top: -2px;
 }
 
-.footer_all {
-  padding-top: 0.5%;
-  padding-bottom: 2em;
-  margin-bottom: -2em;
+.search-container svg path {
+  fill: #ffffff; /* set fill color to white */
 }
-
-#footer_hr {
-  border-top: 5px dotted #8faa62;
-  width: 50%;
-  align: center;
-  clear: both;
+header .header-links > * {
+  margin: 1px;
 }
-
-footer {
-  background: -webkit-linear-gradient(#fff2cc, #6f9235);
-  background: linear-gradient(#fff2cc, #6f9235);
-  clear: both;
+header .header-toggle {
+  position: relative;
 }
-
-.Page_footer {
-  width: 100%;
-  height: 10%;
-  margin-top: 0;
+.header-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.header-toggle p {
+  color: #d8000c;
+  font-weight: 500;
+}
+p:only-of-type {
   margin-bottom: 0;
 }
-
-.Page_footer li {
-  text-align: center;
+header p {
+  margin: 0;
+  padding: 0;
 }
-
-.Page_footer a {
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  font-weight: 400;
+}
+.header-toggle {
+  text-align: left;
+}
+.header-toggle ul li a {
+  font-weight: bold;
+  color: #020000;
+  padding: 0;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  color: #000000;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.header-links {
+  padding-right: 5em;
+}
+.header-toggle ul li:nth-child(2) {
+  padding: 0px 20px 0px 20px;
+}
+
+.header-links a {
+  padding: 2px 0px 0px 0px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  color: #020000;
+  text-decoration: none;
+}
+
+header svg {
+  height: 24px;
+  width: 24px;
+}
+svg path {
+  fill: #000;
+}
+
+header div#cartCount {
+  position: absolute;
+  left: 15px;
+  top: 8px;
+}
+header .header-links .count {
+  top: -2px;
+  font-size: 10px;
+  min-width: 16px;
+  left: 80%;
+  height: 16px;
+  line-height: 17px;
+  right: unset;
+  position: absolute;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #d8000c;
+  text-align: center;
+  display: block;
+}
+header .header-links .cart-count .cart-text {
+  display: none;
+}
+header .header-links a {
+  padding: 0 0 0 25px;
+}
+header span.count.wishlist-count {
+  top: 7px;
+  right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 16%;
+}
+header .header-links .count {
+  top: -2px;
+  font-size: 10px;
+  min-width: 16px;
+  left: 80%;
+  height: 16px;
+  line-height: 17px;
+  right: unset;
+  color: #fff;
+  background-color: #d8000c;
+}
+header .icon-text {
   font-size: 16px;
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  padding-left: 6px;
+  font-weight: bold;
+}
+nav {
+  height: 50px;
+  padding: 0 50px;
+  font-size: 16px;
 }
 
-/* Style for Mobile */
-@media screen and (max-width: 480px) {
-  .company-logo img {
-    width: 20%;
-    height: 20%;
-  }
-
-  .nav-mobile {
-    float: right;
-    padding-right: 0.5em;
-    margin-top: 8%;
-    font-size: 20px;
-  }
-
-  .nav-mobile a {
-    text-decoration: none;
-    color: #000000;
-  }
-
-  .nav-tab {
-    display: none;
-    visibility: hidden;
-  }
-
-  #banner {
-    display: none;
-    visibility: hidden;
-  }
-
-  #mobile_banner {
-    width: 100%;
-  }
-
-  .main-tab {
-    display: none;
-    visibility: hidden;
-  }
-
-  .category_button {
-    color: #ffffff;
-    font-weight: bold;
-    width: 80%;
-    padding: 5%;
-    margin: 5%;
-    background-color: #5f861f;
-  }
-
-  .category_button:hover {
-    background-color: #ffde59;
-    font-size: 75%;
-    color: #5f861f;
-  }
-
-  #map_col {
-    display: none;
-    visibility: hidden;
-    border-right: 10%;
-  }
-
-  #form_col {
-    border-right: 10%;
-  }
-
-  .offers {
-    display: none;
-    visibility: hidden;
-  }
-  .store-map {
-    display: none;
-    visibility: hidden;
-  }
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+i {
+  transform: translateY(250%);
 }
 
-/* Media query for small tab devices such as Surface Duo */
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  /* Style for mobile view
-  Hiding the mobile navigation view  */
-  .nav-mobile a {
-    display: none;
-    visibility: hidden;
-  }
-
-  /* Style for top navigation bar */
-  .navigation-bar {
-    background-color: #5f861f;
-    height: 70px;
-    width: 100%;
-  }
-
-  /* Style for logo in navigation bar */
-  .navigation-bar img {
-    float: left;
-    width: auto;
-    height: 70px;
-  }
-
-  /* Style for tabs in the top navigation menu */
-  .nav-tab {
-    height: 70px;
-    display: inline-block;
-    visibility: visible;
-  }
-
-  /* Style for the unordered list */
-  .navigation-bar ul {
-    padding: 0px;
-    margin: 0px;
-    display: inline-block;
-    vertical-align: top;
-    word-wrap: break-word;
-    float: right;
-  }
-
-  /* Style for the li element */
-  .navigation-bar li {
-    list-style-type: none;
-    padding: 0px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    display: inline;
-  }
-  /* Style for the navigation links */
-  .navigation-bar li a {
-    color: rgb(245, 238, 238);
-    font-size: 16px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    line-height: 70px;
-    padding: 20px 10px;
-    color: #ffffff;
-  }
-
-  #mobile_banner {
-    display: none;
-    visibility: hidden;
-  }
-
-  #banner {
-    width: 100%;
-    height: 50%;
-  }
-
-  .main-mobile {
-    display: none;
-    visibility: hidden;
-  }
-
-  .main-tab {
-    width: 100%;
-    display: block;
-    text-align: center;
-  }
-
-  .category {
-    width: 35%;
-    display: inline-block;
-  }
-
-  .offers {
-    display: none;
-    visibility: hidden;
-  }
+nav ul li {
+  display: inline-block;
 }
 
-/* Media query for tabs */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  /* Style for mobile view
-  Hiding the mobile navigation view  */
-  .nav-mobile a {
-    display: none;
-    visibility: hidden;
-  }
-
-  /* Style for top navigation bar */
-  .navigation-bar {
-    background-color: #5f861f;
-    height: 70px;
-    width: 100%;
-  }
-
-  /* Style for logo in navigation bar */
-  .navigation-bar img {
-    float: left;
-    width: auto;
-    height: 70px;
-  }
-
-  /* Style for tabs in the top navigation menu */
-  .nav-tab {
-    height: 70px;
-    display: inline-block;
-    visibility: visible;
-  }
-
-  /* Style for the unordered list */
-  .navigation-bar ul {
-    padding: 0px;
-    margin: 0px;
-    display: inline-block;
-    vertical-align: top;
-    word-wrap: break-word;
-    float: right;
-  }
-
-  /* Style for the li element */
-  .navigation-bar li {
-    list-style-type: none;
-    padding: 0px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    display: inline;
-  }
-  /* Style for the navigation links */
-  .navigation-bar li a {
-    color: rgb(245, 238, 238);
-    font-size: 16px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    line-height: 70px;
-    padding: 20px 10px;
-    color: #ffffff;
-  }
-
-  #mobile_banner {
-    display: none;
-    visibility: hidden;
-  }
-
-  #banner {
-    width: 100%;
-    height: 50%;
-  }
-
-  .main-mobile {
-    display: none;
-    visibility: hidden;
-  }
-
-  .main-tab {
-    width: 100%;
-    height: 100%;
-    display: block;
-    text-align: center;
-  }
-
-  .category {
-    width: 35%;
-    display: inline-block;
-  }
-
-  .offers {
-    display: none;
-    visibility: hidden;
-  }
-  .store-map {
-    width: 30%;
-    display: inline;
-    float: left;
-    margin-left: 2%;
-    margin-top: 1.5em;
-  }
+nav a {
+  display: block;
+  padding: 0 10px;
+  color: #000000;
+  line-height: 50px;
+  font-weight: bolder;
+  text-decoration: none;
 }
 
-@media screen and (min-width: 481px) and (max-width: 767px) {
-  .categories {
-    display: none;
-    visibility: hidden;
-  }
-  .nav-mobile a {
-    display: none;
-    visibility: hidden;
-  }
-  .item {
-    width: 40%;
-  }
-  .company-logo img {
-    width: 15%;
-    height: 100%;
-  }
-  #navigation-container {
-    width: 1200px;
-    height: 70px;
-  }
-  #navigation-container img {
-    float: left;
-  }
-  .navigation-bar {
-    background-color: #5f861f;
-    height: 70px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navigation-bar img {
-    float: left;
-  }
-
-  .nav-tab {
-    /* background-color: rgb(72, 141, 72); */
-    background-color: #5f861f;
-    width: 80%;
-    height: 20%;
-    display: inline-block;
-    visibility: visible;
-    /*padding: 0%*/
-    float: right;
-    /*margin-left:5%;*/
-  }
-  .nav-tab a {
-    text-align: left;
-    text-decoration: none;
-    padding: 20px 10px;
-    color: #ffffff;
-  }
-  .navigation-bar ul {
-    padding: 0px;
-    margin: 0px;
-    text-align: right;
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 0px;
-    float: right;
-  }
-
-  .navigation-bar li {
-    list-style-type: none;
-    padding: 0px;
-    height: 24px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    display: inline;
-  }
-
-  .navigation-bar li a {
-    color: rgb(245, 238, 238);
-    font-size: 16px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    line-height: 70px;
-    /* padding: 5px 15px; */
-    opacity: 0.7;
-  }
-  .store-map {
-    width: 30%;
-    display: inline;
-    float: left;
-    margin-left: 2em;
-    margin-top: 1.5em;
-  }
+nav .dropdown i {
+  margin-left: 5px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .categories {
-    display: none;
-    visibility: hidden;
-  }
-  .nav-mobile {
-    display: none;
-    visibility: hidden;
-  }
-  .item {
-    width: 44%;
-  }
-  .nav-tab {
-    /* background-color: rgb(72, 141, 72); */
-    background-color: #5f861f;
-    width: 80%;
-    height: 20%;
-    display: inline-block;
-    visibility: visible;
-    padding: 10px 0;
-    float: right;
-    margin-right: 5%;
-  }
-  .nav-tab a {
-    text-align: left;
-    text-decoration: none;
-    padding: 20px 10px;
-    color: #ffffff;
-  }
-  #navigation-container {
-    width: 1200px;
-    height: 70px;
-  }
-  #navigation-container img {
-    float: left;
-  }
-  .navigation-bar {
-    background-color: #5f861f;
-    height: 70px;
-    width: 100%;
-    text-align: center;
-  }
-
-  .navigation-bar img {
-    float: left;
-    width: 15%;
-    height: 100%;
-  }
-
-  .navigation-bar ul {
-    padding: 0px;
-    margin: 0px;
-    text-align: right;
-    display: inline-block;
-    vertical-align: top;
-    float: right;
-  }
-
-  .navigation-bar li {
-    list-style-type: none;
-    padding: 0px;
-    height: 24px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    display: inline;
-  }
-
-  .navigation-bar li a {
-    color: rgb(245, 238, 238);
-    font-size: 16px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    line-height: 70px;
-    padding: 5px 15px;
-    opacity: 0.7;
-  }
-  .store-map {
-    width: 30%;
-    display: block;
-    margin-left: 2em;
-    margin-top: 1.5em;
-  }
+nav ul li:hover > ul {
+  display: inherit;
 }
 
-@media screen and (min-width: 1025px) {
-  header {
-    background-color: #5f861f;
-    height: 40%;
-    width: 100%;
-    text-align: center;
-  }
-  .nav-mobile a {
-    display: none;
-    visibility: hidden;
-  }
+nav ul ul li a {
+  border-bottom: 1px solid #fff;
+}
 
-  /* Style for top navigation bar */
-  .navigation-bar {
-    background-color: #5f861f;
-    height: 70px;
-    width: 100%;
-  }
+nav ul ul li:last-child a {
+  border-bottom: none;
+}
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 55px;
+  width: 60%; /* Set the width of the dropdown menu */
+  height: 200px; /* Set the height of the dropdown menu */
+  background-color: #fff; /* Set a background color for the dropdown menu */
+  border: 1px solid #ccc; /* Add a border to the dropdown menu */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add a box shadow to the dropdown menu */
+}
 
-  /* Style for logo in navigation bar */
-  .navigation-bar img {
-    float: left;
-    width: auto;
-    height: 70px;
-    margin-left: 2.5%;
-  }
-
-  /* Style for tabs in the top navigation menu */
-  .nav-tab {
-    height: 70px;
-    display: inline-block;
-    visibility: visible;
-    float: right;
-    margin-right: 5%;
-  }
-
-  /* Style for the unordered list */
-  .navigation-bar ul {
-    padding: 0px;
-    margin: 0px;
-    display: inline-block;
-    vertical-align: top;
-    word-wrap: break-word;
-    float: right;
-  }
-
-  /* Style for the li element */
-  .navigation-bar li {
-    list-style-type: none;
-    padding: 0px;
-    margin-top: 4px;
-    margin-bottom: 4px;
-    display: inline;
-  }
-  /* Style for the navigation links */
-  .navigation-bar li a {
-    color: rgb(245, 238, 238);
-    font-size: 16px;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    line-height: 70px;
-    padding: 20px 10px;
-    color: #ffffff;
-  }
-
-  #mobile_banner {
-    display: none;
-    visibility: hidden;
-  }
-
-  #banner {
-    width: 100%;
-    height: 40%;
-  }
-
-  .main-mobile {
-    display: none;
-    visibility: hidden;
-  }
-
-  .main-tab {
-    display: inline-block;
-    width: 65%;
-    text-align: center;
-    float: left;
-    margin-top: 3%;
-  }
-
-  .category {
-    width: 35%;
-    display: inline-block;
-  }
-
-  .store-map {
-    width: 30%;
-    display: inline;
-    float: left;
-    margin-left: 2em;
-    margin-top: 1.5em;
-  }
+nav ul ul li {
+  width: 100%;
+  display: block;
 }
