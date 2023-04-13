@@ -1,6 +1,9 @@
 body {
+  font-family: "Anuphan", sans-serif;
   font-family: "Poppins", sans-serif;
 }
+
+/*
 
 header {
 }
@@ -245,14 +248,20 @@ nav ul ul {
   display: none;
   position: absolute;
   top: 55px;
-  width: 60%; /* Set the width of the dropdown menu */
-  height: 200px; /* Set the height of the dropdown menu */
   background-color: #fff; /* Set a background color for the dropdown menu */
   border: 1px solid #ccc; /* Add a border to the dropdown menu */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Add a box shadow to the dropdown menu */
 }
 
 nav ul ul li {
-  width: 100%;
-  display: block;
+  width: 33%;
+  height: 20%;
+}
+.dropdownMenu {
+  display: flex;
+  flex-wrap: wrap;
+}
+.text-highlight {
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-weight: 700;
 }
