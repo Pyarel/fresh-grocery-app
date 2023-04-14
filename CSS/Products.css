@@ -1,0 +1,213 @@
+.breadcrumb {
+  background-color: rgb(245, 241, 241);
+  font-weight: 100;
+}
+.breadcrumb p {
+  margin: 0;
+  padding: 20px;
+  margin-left: 4em;
+}
+
+.product-container {
+  display: flex;
+}
+.side-nav {
+  width: 30%;
+  margin-top: 1em;
+  margin-left: 2em;
+}
+.side-nav h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.availability {
+  margin-top: 1em;
+}
+
+.filter-control {
+  display: block;
+  margin-bottom: 10px;
+  transition: all 0.3s linear;
+}
+.filter-control input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #020000;
+}
+.filter-control label {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+}
+.filter-control label:before {
+  content: "";
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #f9b827;
+  padding: 7px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-top: -4px;
+  border-radius: 50%;
+}
+filter-control input:checked + label {
+  color: #f9b827;
+}
+.filter-control input[type="checkbox"] + label:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  opacity: 1 !important;
+  background-color: #f9b827;
+  transition: all cubic-bezier(0.47, 1.21, 0.47, 1.21) 0.3s;
+  -webkit-transition: all cubic-bezier(0.47, 1.21, 0.47, 1.21) 0.3s;
+}
+
+:after,
+:before {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.filter-control input:checked + label {
+  color: #f9b827;
+}
+.filter-control label {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  font-size: 14px;
+}
+.price-control {
+  display: grid;
+  grid-template-rows: 30px 50px 1fr;
+  grid-template-columns: repeat(2, 150px);
+}
+.price-control input {
+  width: 50%;
+  box-sizing: content-box;
+  padding: 20px;
+  border: 1px solid #f87560;
+}
+.price-row {
+  padding: 10px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.products {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 3em;
+  border-radius: 10px;
+  text-align: center;
+}
+/* Style for each item */
+.item {
+  align-items: flex-end;
+  justify-content: flex-end;
+  border: 1px solid rgb(227, 223, 223);
+  padding: 2em 1em;
+  margin: 0.5em 1em;
+  width: 25%;
+  background-color: #ffffff;
+}
+.item-name {
+  text-align: center;
+}
+.item-image img {
+  width: 70%;
+  height: 150px;
+}
+.item-price {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+.item-price sup {
+  font-size: 10px;
+}
+.count-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100%;
+  text-align: center;
+}
+
+/*apply css properties to button tag*/
+
+.product-count {
+  width: 2em;
+  height: 2em;
+  margin: 20px 0;
+  font-size: 16px;
+  background-color: transparent;
+  color: #f98675;
+  border: 1px solid #f98675;
+}
+
+/*apply hover effect to button tag*/
+
+.product-count:hover {
+  background-color: #f87560;
+  color: #fff;
+}
+
+/*apply css properties to h2 tag*/
+
+#counting {
+  color: black;
+  font-size: 12px;
+  border: 1px solid #f98675;
+  padding: 6px 16px;
+}
+
+.add-to-cart-btn {
+  background-color: #f98675;
+  border: 1px solid #f98675;
+  padding: 10px;
+  color: #fff;
+}
+.add-to-cart-btn:hover {
+  background-color: #75d1f9;
+  border: 1px solid #75d1f9;
+  padding: 12px;
+  font-weight: bold;
+}
+
+footer .content-wrap {
+  height: 275px;
+}

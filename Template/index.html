@@ -15,7 +15,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../Script/script.js"></script>
 
-  <title>Home Page</title>
+  <title>Fresh</title>
 </head>
 
 <body>
@@ -81,8 +81,8 @@
         <li class="dropdown">
           <a href="#">Products <i class="fas fa-chevron-down fa-xs"></i></a>
           <ul class="dropDownMenu">
-            <li><a class="text-highlight" href="#">Grocery</a></li>
-            <li><a class="text-highlight" href="#">Produce</a></li>
+            <li><a class="text-highlight" href="grocery.html">Grocery</a></li>
+            <li><a class="text-highlight" href="produce.html">Produce</a></li>
             <li><a class="text-highlight" href="#">Diary</a></li>
 
             <li><a href="#">Item 4</a></li>
@@ -104,44 +104,92 @@
     </nav>
     <hr>
   </header>
-  <footer>
-    <div class="content-wrap">
-      <div class="brand-info">
-        <div class="brand-logo">
-          <a href="index.html"><img src="../Images/logo3.jpeg" alt="Logo"></a>
+  <!-- <div class="background-banner">
+    <a href="grocery.html"><img src="../Images/banner_2.jpeg" alt="Banner Image"></a>
+  </div> -->
+  <div class="banner_container">
+    <a href="produce.html"><img id="banner1" src="../Images/Home_page/banner3.jpeg" alt="banner1"></a>
+    <a href="produce.html"><img id="banner2" src="../Images/Home_page/banner4.webp" alt="banner2"></a>
+  </div>
+  </header>
+
+  <main id="home_page">
+    <!-- Main for mobile-->
+    <div class="Mobile_main">
+      <h1>Shop By Categories</h1>
+      <div class="Mobile_category">
+        <input class="grocery_option" id="grocery_button" type="button" value="GROCERY"
+          onclick="window.location.href='grocery.html';"><br>
+        <input class="produce_option" id="produce_button" type="button" value="PRODUCE"
+          onclick="window.location.href='produce.html';"><br>
+      </div>
+    </div>
+
+    <!-- Main for others -->
+    <div class="main">
+
+      <!--for laptops only-->
+      <div class="daily_offers_container">
+        <div class="daily_offers">
+          <a href="produce.html"><img src="../Images/Home_page/chicken.jpeg" alt="chicken"></a>
+          <a href="produce.html"><img src="../Images/Home_page/Tomato.jpeg" alt="Tomato"></a>
+          <a href="produce.html"><img src="../Images/Home_page/potato.jpeg" alt="potato"></a>
+          <a href="produce.html"><img src="../Images/Home_page/fruits.jpeg" alt="potato"></a>
         </div>
-        <p>Making your grocery shopping a pleasant experience by offering a diverse selection of products at
-          competitive prices in a clean, friendly, and welcoming environment. </p>
-      </div>
-      <div class="store-info">
-        <h2>Our store!</h2>
-        <li>No: 58 A, East Madison</li>
-        <li>Street, Baltimore, MD, USA</li>
-        <li>4508</li>
-        <li>0000 - 123 - 456789</li>
-        <li>info@example.com</li>
-
-      </div>
-      <div class="services">
-        <h2>Information</h2>
-        <li>Home Page</li>
-        <li>Our Products</li>
-        <li>About us</li>
-        <li>Contact</li>
-        <li>Privacy Policies</li>
       </div>
 
+      <!-- Categories -->
+      <h1>Shop By Categories</h1>
+      <div class="main_container">
+        <div class="category">
+          <a class="grocery_img_option" href="grocery.html"><img src="../Images/Home_page/grocery.png"></a>
+          <h4><a href=" " style="text-decoration:none;color:#000000;">grocery</a></h4>
+        </div>
+        <div class="category">
+          <a class="produce_img_option" href="produce.html"><img src="../Images/Home_page/produce.png"></a>
+          <h4><a href="produce.html" style="text-decoration:none;color:#000000;">produce</a></h4>
+        </div>
+
+      </div>
     </div>
-    <hr>
-    <div class="footer-links">
-      <ul class="contact-list">
-        <li><a href="mailto:pyarel.fer@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa-brands fa-square-instagram fa-xl"></i></a></li>
-        <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
-      </ul>
-    </div>
-  </footer>
+    <footer>
+      <div class="content-wrap">
+        <div class="brand-info">
+          <div class="brand-logo">
+            <a href="index.html"><img src="../Images/logo3.jpeg" alt="Logo"></a>
+          </div>
+          <p>Making your grocery shopping a pleasant experience by offering a diverse selection of products at
+            competitive prices in a clean, friendly, and welcoming environment. </p>
+        </div>
+        <div class="store-info">
+          <h2>Our store!</h2>
+          <li>No: 58 A, East Madison</li>
+          <li>Street, Baltimore, MD, USA</li>
+          <li>4508</li>
+          <li>0000 - 123 - 456789</li>
+          <li>info@example.com</li>
+
+        </div>
+        <div class="services">
+          <h2>Information</h2>
+          <li>Home Page</li>
+          <li>Our Products</li>
+          <li>About us</li>
+          <li>Contact</li>
+          <li>Privacy Policies</li>
+        </div>
+
+      </div>
+      <hr>
+      <div class="footer-links">
+        <ul class="contact-list">
+          <li><a href="mailto:pyarel.fer@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa-brands fa-square-instagram fa-xl"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+        </ul>
+      </div>
+    </footer>
 </body>
 
 </html>

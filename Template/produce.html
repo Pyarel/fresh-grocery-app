@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anuphan:wght@500;600;700&family=Poppins&family=Schibsted+Grotesk:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/Products.css">
+    <script src="https://kit.fontawesome.com/3a8639ce75.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../Script/script.js"></script>
+
+    <title>Fresh</title>
+</head>
+
+<body>
+    <header id="nav-header">
+        <div class="container">
+            <div class="brand-logo">
+                <a href="index.html"><img src="../Images/logo3.jpeg" alt="Logo"></a>
+            </div>
+            <div class="search-container">
+                <form action="">
+                    <input type="search" id="SearchInput" name="q" value="" placeholder="Search" aria-label="Search"
+                        autocomplete="off" class="search-bar-input">
+                    <button type="submit" class="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20">
+                            <path
+                                d="M17.5,19.6a1.87,1.87,0,0,1-.782-0.574q-2.077-2.186-4.162-4.364c-0.047-.049-0.093-0.1-0.143-0.155a7.568,7.568,0,0,1-6.654,1.054A7.435,7.435,0,0,1,1.6,12.435,7.735,7.735,0,0,1,3.1,2.2a7.584,7.584,0,0,1,9.833.022,7.747,7.747,0,0,1,2.64,7.268,7.712,7.712,0,0,1-1.686,3.646c0.092,0.1.177,0.189,0.262,0.278q2.1,2.2,4.2,4.4a1.01,1.01,0,0,1,.06,1.47,2.554,2.554,0,0,1-.535.316H17.5ZM8,2.429a5.726,5.726,0,1,0,5.677,5.723A5.713,5.713,0,0,0,8,2.429Z">
+                            </path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+            <div class="header-links">
+                <div class="header-toggle">
+                    <p>Hello!.</p>
+                    <ul>
+                        <li><a href=""><span>Sign In</span></a></li>
+
+                        <li><a href=""><span>Register</span></a></li>
+                    </ul>
+                </div>
+                <a href="/cart" class="cart-toggle " id="cart-number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28">
+
+                        <path
+                            d="M26.7,13.984c0.094,2.466.155,4.933,0.292,7.4a6.136,6.136,0,0,1-2.42,5.5A5.157,5.157,0,0,1,21.3,28q-7.729,0-15.459,0A5.911,5.911,0,0,1,0,22.013c0.012-1.956.124-3.912,0.195-5.869s0.146-3.891.22-5.837c0.062-1.644.1-3.289,0.194-4.931A5.9,5.9,0,0,1,5.217.134,6.5,6.5,0,0,1,6.458.008q7.027-.013,14.053,0a5.854,5.854,0,0,1,5.844,5.273c0.11,0.948.1,1.913,0.136,2.87Q26.6,11.064,26.7,13.984ZM2.251,13.892H2.181c0,0.645.017,1.291,0,1.936-0.061,1.946-.108,3.893-0.211,5.837A3.987,3.987,0,0,0,5.906,26q7.684,0.013,15.367,0a3.687,3.687,0,0,0,1.049-.164,4.121,4.121,0,0,0,2.78-4.046c-0.032-1.645-.116-3.288-0.174-4.932q-0.193-5.432-.385-10.863a4.228,4.228,0,0,0-.591-2.135A3.814,3.814,0,0,0,20.494,2Q13.62,2,6.746,2a7.477,7.477,0,0,0-.882.055A3.919,3.919,0,0,0,2.552,5.683C2.442,8.419,2.35,11.156,2.251,13.892ZM13.5,12.034a6.9,6.9,0,0,1-6.769-5.9,7.636,7.636,0,0,1-.077-1.15A0.906,0.906,0,0,1,7.6,4a0.916,0.916,0,0,1,1,.967A4.934,4.934,0,0,0,9.983,8.494a4.652,4.652,0,0,0,5,1.253,4.721,4.721,0,0,0,3.321-3.9,6.255,6.255,0,0,0,.074-0.9,0.978,0.978,0,0,1,1.954,0,6.906,6.906,0,0,1-5.536,6.926C14.366,11.947,13.929,11.981,13.5,12.034Z">
+                        </path>
+                    </svg>
+
+                    <span class="icon-text">My Basket</span>
+                    <div id="cartCount" data-cart_item_count="0" data-show_cnt_zero="yes" class="cart-count xhide">
+                        <span class="count cartCount">0</span>
+                        <span class="cart-text">items</span>
+                    </div>
+                </a>
+                <a href="/pages/wishlist" class="icon wishlist ">
+                    <svg class="heart-empty" xmlns="http://www.w3.org/2000/svg" width="28" height="26"
+                        viewBox="0 0 28 26">
+                        <path
+                            d="M0,7.931C0.091,7.419.162,6.9,0.278,6.4A7.933,7.933,0,0,1,6.33.155a7.024,7.024,0,0,1,6.977,2.478c0.24,0.269.456,0.561,0.7,0.858,0.2-.249.383-0.494,0.58-0.726A7.215,7.215,0,0,1,25.94,2.758a9.205,9.205,0,0,1,1.966,7.334,11.194,11.194,0,0,1-2.368,5.391,31.041,31.041,0,0,1-4.01,4.272q-3.162,2.875-6.347,5.724a1.591,1.591,0,0,1-2.322.027C10.306,23.2,7.744,20.9,5.22,18.553A20.53,20.53,0,0,1,1.635,14.27,10.5,10.5,0,0,1,.054,9.8C0.044,9.71.018,9.619,0,9.528v-1.6ZM13.985,24.268c0.064-.052.1-0.079,0.134-0.109,2.077-1.868,4.161-3.728,6.227-5.609a29.109,29.109,0,0,0,4.123-4.434A8.743,8.743,0,0,0,26.317,8a7.09,7.09,0,0,0-2.563-5.056,5.59,5.59,0,0,0-6.739-.167,6.479,6.479,0,0,0-1.906,2.132c-0.585,1.1-1.638,1.141-2.2.009a4.062,4.062,0,0,0-.441-0.651A5.754,5.754,0,0,0,8.324,1.751a5.571,5.571,0,0,0-4.94,2.033,7.636,7.636,0,0,0-1.595,6.466,9.338,9.338,0,0,0,1.854,4.012,28.463,28.463,0,0,0,3.821,4.106C9.623,20.339,11.8,22.293,13.985,24.268Z">
+                        </path>
+                    </svg>
+
+                    <div>
+                        <span class="count wishlist-count">0</span>
+                        <span class="icon-text">Wishlist</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Products <i class="fas fa-chevron-down fa-xs"></i></a>
+                    <ul class="dropDownMenu">
+                        <li><a class="text-highlight" href="grocery.html">Grocery</a></li>
+                        <li><a class="text-highlight" href="produce.html">Produce</a></li>
+                        <li><a class="text-highlight" href="#">Diary</a></li>
+
+                        <li><a href="#">Item 4</a></li>
+                        <li><a href="#">Item 5</a></li>
+                        <li><a href="#">Item 6</a></li>
+
+                        <li><a href="#">Item 7</a></li>
+                        <li><a href="#">Item 8</a></li>
+                        <li><a href="#">Item 9</a></li>
+
+                        <li><a href="#">Item 7</a></li>
+                        <li><a href="#">Item 8</a></li>
+                        <li><a href="#">Item 9</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+    <div class="breadcrumb">
+        <p>Home/Products</p>
+    </div>
+    <div class="product-container">
+        <div class="side-nav">
+            <h2>Filter </h2>
+            <hr>
+            <div class="availability">
+                <div class="filter-control">
+                    <input type="checkbox">
+                    <label class=" " id="filter-availability" for="filter-availability">
+                        In stock
+                    </label>
+                </div>
+                <div class="filter-control">
+                    <input type="checkbox">
+                    <label class=" " id="filter-availability" for="filter-availability">
+                        Out of stock
+                    </label>
+                </div>
+            </div>
+            <h2>Price</h2>
+            <hr>
+            <div class="price">
+                <div class="filter-control-price">
+                    <p>The maximum price is $100.</p><br>
+                    <div class="price-control">
+                        <div class="price-row">
+                            <label for="price-start">From $</label>
+                        </div>
+                        <div class="price-row">
+                            <label for="price-end">To $</label>
+                        </div>
+                        <div class="price-row">
+                            <input type="number" name="price-start" id="price-start">
+                        </div>
+                        <div class="price-row">
+                            <input type="number" name="price-end" id="price-end">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products">
+            <hr>
+            <div class="item">
+
+                <div class="item-image"><img src="../Images/Produce/chicken.jpg" alt="Chicken"></div>
+                <hr>
+                <div class="item-price"><b>$19<sup>99</sup></b></div>
+                <div class="item-name">Chicken</div>
+                <div class="count-container">
+                    <!--increment() and decrement() functions on button click-->
+                    <button class="product-count" onclick="increment()">+</button>
+                    <h2 id="counting">0</h2>
+                    <button class="product-count" onclick="decrement()">-</button>
+                </div>
+                <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+
+                <div class="item-image"><img src="../Images/Produce/brinjals.png" alt="Product Image"></div>
+                <hr>
+                <div class="item-price"><b>$2<sup>99</sup> per lb</b></div>
+                <div class="item-name">Egg plant</div>
+                <div class="count-container">
+                    <!--increment() and decrement() functions on button click-->
+                    <button class="product-count" onclick="increment()">+</button>
+                    <h2 id="counting">0</h2>
+                    <button class="product-count" onclick="decrement()">-</button>
+                </div>
+                <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+
+                <div class="item-image"><img src="../Images/Produce/brocolli.jpg" alt="Product Image"></div>
+                <hr>
+                <div class="item-price"><b>$5<sup>99</sup></b></div>
+                <div class="item-name">Brocolli</div>
+                <div class="count-container">
+                    <!--increment() and decrement() functions on button click-->
+                    <button class="product-count" onclick="increment()">+</button>
+                    <h2 id="counting">0</h2>
+                    <button class="product-count" onclick="decrement()">-</button>
+                </div>
+                <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+
+                <div class="item-image"><img src="../Images/Produce/capsicum.png" alt="Product Image"></div>
+                <hr>
+                <div class="item-price"><b>$1.99 per lb</b></div>
+                <div class="item-name">Green Pepper</div>
+                <div class="count-container">
+                    <!--increment() and decrement() functions on button click-->
+                    <button class="product-count" onclick="increment()">+</button>
+                    <h2 id="counting">0</h2>
+                    <button class="product-count" onclick="decrement()">-</button>
+                </div>
+                <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+
+                <div class="item-image"><img src="../Images/Produce/Clementines.png" alt="Product Image"></div>
+                <hr>
+                <div class="item-price"><b>$0.99 ea</b></div>
+                <div class="item-name">Clementines</div>
+                <div class="count-container">
+                    <!--increment() and decrement() functions on button click-->
+                    <button class="product-count" onclick="increment()">+</button>
+                    <h2 id="counting">0</h2>
+                    <button class="product-count" onclick="decrement()">-</button>
+                </div>
+                <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+
+                <div class="item-image"><img src="../Images/Produce/Greengrapes.png" alt="Product Image"></div>
+                <hr>
+                <div class="item-price"><b>$1.50 per lb</b></div>
+                <div class="item-name">Green Grapes</div>
+                <div class="count-container">
+                    <!--increment() and decrement() functions on button click-->
+                    <button class="product-count" onclick="increment()">+</button>
+                    <h2 id="counting">0</h2>
+                    <button class="product-count" onclick="decrement()">-</button>
+                </div>
+                <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+
+                <div class="item-image"><img src="../Images/Produce/mushrooms.png" alt="Product Image"></div>
+                <hr>
+                <div class="item-price"><b>$2.50 ea</b></div>
+                <div class="item-name">Mushroom</div>
+                <div class="count-container">
+                    <!--increment() and decrement() functions on button click-->
+                    <button class="product-count" onclick="increment()">+</button>
+                    <h2 id="counting">0</h2>
+                    <button class="product-count" onclick="decrement()">-</button>
+                </div>
+                <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+
+                <div class="item-image"><img src="../Images/Produce/potatoes.png" alt="Product Image"></div>
+                <hr>
+                <div class="item-price"><b>$4.99 per lb</b></div>
+                <div class="item-name">Potatoes</div>
+                <div class="count-container">
+                    <!--increment() and decrement() functions on button click-->
+                    <button class="product-count" onclick="increment()">+</button>
+                    <h2 id="counting">0</h2>
+                    <button class="product-count" onclick="decrement()">-</button>
+                </div>
+                <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="item">
+
+                <div class="item-image"><img src="../Images/Produce/tomatoes.png" alt="Product Image"></div>
+                <hr>
+                <div class="item-price"><b>$2.99 per lb</b></div>
+                <div class="item-name">Tomatoes</div>
+                <div class="count-container">
+                    <!--increment() and decrement() functions on button click-->
+                    <button class="product-count" onclick="increment()">+</button>
+                    <h2 id="counting">0</h2>
+                    <button class="product-count" onclick="decrement()">-</button>
+                </div>
+                <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="content-wrap">
+            <div class="brand-info">
+                <div class="brand-logo">
+                    <a href="index.html"><img src="../Images/logo3.jpeg" alt="Logo"></a>
+                </div>
+                <p>Making your grocery shopping a pleasant experience by offering a diverse selection of products at
+                    competitive prices in a clean, friendly, and welcoming environment. </p>
+            </div>
+            <div class="store-info">
+                <h2>Our store!</h2>
+                <li>No: 58 A, East Madison</li>
+                <li>Street, Baltimore, MD, USA</li>
+                <li>4508</li>
+                <li>0000 - 123 - 456789</li>
+                <li>info@example.com</li>
+
+            </div>
+            <div class="services">
+                <h2>Information</h2>
+                <li>Home Page</li>
+                <li>Our Products</li>
+                <li>About us</li>
+                <li>Contact</li>
+                <li>Privacy Policies</li>
+            </div>
+
+        </div>
+        <hr>
+        <div class="footer-links">
+            <ul class="contact-list">
+                <li><a href="mailto:pyarel.fer@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-square-instagram fa-xl"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
