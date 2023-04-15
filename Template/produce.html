@@ -57,7 +57,7 @@
 
                     <span class="icon-text">My Basket</span>
                     <div id="cartCount" data-cart_item_count="0" data-show_cnt_zero="yes" class="cart-count xhide">
-                        <span class="count cartCount">0</span>
+                        <span class="count cartCount" id="item-count">0</span>
                         <span class="cart-text">items</span>
                     </div>
                 </a>
@@ -115,15 +115,16 @@
             <hr>
             <div class="availability">
                 <div class="filter-control">
-                    <input type="checkbox">
-                    <label class=" " id="filter-availability" for="filter-availability">
+                    <!--InStock and outstock-->
+                    <input type="radio" id="in-stock" name="stock-filter" value="in-stock">
+                    <label class=" " id="in-stock-availability" for="in-stock">
                         In stock
                     </label>
                 </div>
                 <div class="filter-control">
-                    <input type="checkbox">
-                    <label class=" " id="filter-availability" for="filter-availability">
-                        Out of stock
+                    <input type="radio" id="out-of-stock" name="stock-filter" value="out-of-stock">
+                    <label class=" " id="out-of-stock-availability" for="out-of-stock">
+                        Out-of-stock
                     </label>
                 </div>
             </div>
@@ -155,48 +156,51 @@
 
                 <div class="item-image"><img src="../Images/Produce/chicken.jpg" alt="Chicken"></div>
                 <hr>
-                <div class="item-price"><b>$19<sup>99</sup></b></div>
+                <div class="item-price"><b>$19<sup>.99</sup></b></div>
                 <div class="item-name">Chicken</div>
+                <div class="item-Outstock">Out of Stock</div> for chicken for potato
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
-                    <button class="product-count" onclick="increment()">+</button>
+                    <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
-                    <button class="product-count" onclick="decrement()">-</button>
+                    <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
                 <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
                 </div>
             </div>
             <div class="item">
 
                 <div class="item-image"><img src="../Images/Produce/brinjals.png" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$2<sup>99</sup> per lb</b></div>
+                <div class="item-price"><b>$2<sup>.99</sup> per lb</b></div>
                 <div class="item-name">Egg plant</div>
+                <div class="item-Instock"></div>
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
-                    <button class="product-count" onclick="increment()">+</button>
+                    <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
-                    <button class="product-count" onclick="decrement()">-</button>
+                    <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
                 <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
                 </div>
             </div>
             <div class="item">
 
                 <div class="item-image"><img src="../Images/Produce/brocolli.jpg" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$5<sup>99</sup></b></div>
+                <div class="item-price"><b>$5<sup>.99</sup></b></div>
                 <div class="item-name">Brocolli</div>
+                <div class="item-Instock"></div>
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
-                    <button class="product-count" onclick="increment()">+</button>
+                    <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
-                    <button class="product-count" onclick="decrement()">-</button>
+                    <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
                 <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
                 </div>
             </div>
             <div class="item">
@@ -205,14 +209,15 @@
                 <hr>
                 <div class="item-price"><b>$1.99 per lb</b></div>
                 <div class="item-name">Green Pepper</div>
+                <div class="item-Instock"></div>
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
-                    <button class="product-count" onclick="increment()">+</button>
+                    <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
-                    <button class="product-count" onclick="decrement()">-</button>
+                    <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
                 <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
                 </div>
             </div>
             <div class="item">
@@ -221,14 +226,15 @@
                 <hr>
                 <div class="item-price"><b>$0.99 ea</b></div>
                 <div class="item-name">Clementines</div>
+                <div class="item-Instock"></div>
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
-                    <button class="product-count" onclick="increment()">+</button>
+                    <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
-                    <button class="product-count" onclick="decrement()">-</button>
+                    <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
                 <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
                 </div>
             </div>
             <div class="item">
@@ -237,14 +243,15 @@
                 <hr>
                 <div class="item-price"><b>$1.50 per lb</b></div>
                 <div class="item-name">Green Grapes</div>
+                <div class="item-Instock"></div>
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
-                    <button class="product-count" onclick="increment()">+</button>
+                    <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
-                    <button class="product-count" onclick="decrement()">-</button>
+                    <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
                 <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
                 </div>
             </div>
             <div class="item">
@@ -253,14 +260,15 @@
                 <hr>
                 <div class="item-price"><b>$2.50 ea</b></div>
                 <div class="item-name">Mushroom</div>
+                <div class="item-Instock"></div>
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
-                    <button class="product-count" onclick="increment()">+</button>
+                    <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
-                    <button class="product-count" onclick="decrement()">-</button>
+                    <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
                 <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
                 </div>
             </div>
             <div class="item">
@@ -269,14 +277,15 @@
                 <hr>
                 <div class="item-price"><b>$4.99 per lb</b></div>
                 <div class="item-name">Potatoes</div>
+                <div class="item-Outstock">Out of Stock</div> for chicken for potato
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
-                    <button class="product-count" onclick="increment()">+</button>
+                    <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
-                    <button class="product-count" onclick="decrement()">-</button>
+                    <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
                 <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
                 </div>
             </div>
             <div class="item">
@@ -285,14 +294,15 @@
                 <hr>
                 <div class="item-price"><b>$2.99 per lb</b></div>
                 <div class="item-name">Tomatoes</div>
+                <div class="item-Instock"></div>
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
-                    <button class="product-count" onclick="increment()">+</button>
+                    <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
-                    <button class="product-count" onclick="decrement()">-</button>
+                    <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
                 <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
                 </div>
             </div>
         </div>

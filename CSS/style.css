@@ -247,6 +247,7 @@ nav ul ul li:last-child a {
 }
 nav ul ul {
   display: none;
+  z-index: 9999;
   position: absolute;
   top: 55px;
   background-color: #fff; /* Set a background color for the dropdown menu */

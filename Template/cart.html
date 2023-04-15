@@ -16,6 +16,7 @@
     <script src="https://kit.fontawesome.com/3a8639ce75.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../Script/script.js"></script>
+    <script src="../Script/cart.js"></script>
 
     <title>Fresh</title>
 </head>
@@ -58,7 +59,7 @@
 
                     <span class="icon-text">My Basket</span>
                     <div id="cartCount" data-cart_item_count="0" data-show_cnt_zero="yes" class="cart-count xhide">
-                        <span class="count cartCount">0</span>
+                        <span class="count cartCount" id="item-count">0</span>
                         <span class="cart-text">items</span>
                     </div>
                 </a>
@@ -114,9 +115,73 @@
         <div class="cart-table">
             <form action="" name="submitProduct" id="submitProduct" class="submit-form">
                 <div class="cart-items">
+                    <div class="cart-row">
+                        <div class="cart-product">
+                            <img src="../Images/Grocery/bodywash.png" alt="Body Wash">
+                        </div>
+                        <div class="product-info">
+                            <h2>Fresh Beauty Body Wash</h2>
+                            <div class="item-price"><b>$8<sup>.99</sup></b></div>
+                            <div class="qty-box-set">
+                                <button class="qtyminus1" onclick="decrementCart(event)"> - </button>
+                                <h2 class="quantity-selector" id="counting">0</h2>
+                                <button class="qtyplus1" onclick="incrementCart(event)"> + </button>
+                                <a href="/cart/change?line=1&amp;quantity=0" class="cart__remove close_icon">
+                                    <i class="fa-regular fa-trash-can fa-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="price ">
+                            <span class="cart_total">Total :</span>
+
+                            <strong>
+                                $14.00
+
+                            </strong>
+
+                        </div>
+
+                    </div>
+                    <div class="cart-row">
+                        <div class="cart-product">
+                            <img src="../Images/Grocery/bodywash.png" alt="Body Wash">
+                        </div>
+                        <div class="product-info">
+                            <h2>Fresh Beauty Body Wash</h2>
+                            <div class="item-price"><b>$8<sup>.99</sup></b></div>
+                            <div class="qty-box-set">
+                                <button class="qtyminus1" onclick="decrement()"> - </button>
+                                <h2 class="quantity-selector" id="counting">0</h2>
+                                <button class="qtyplus1" onclick="increment()"> + </button>
+                                <a href="/cart/change?line=1&amp;quantity=0" class="cart__remove close_icon">
+                                    <i class="fa-regular fa-trash-can fa-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="price ">
+                            <span class="cart_total">Total :</span>
+
+                            <strong>
+                                $14.00
+
+                            </strong>
+
+                        </div>
+
+                    </div>
+                    <div class="btn_actions">
+                        <a class="dt-sc-btn" href="/collections/all">Continue shopping</a>
+                        <input type="submit" name="update" class="dt-sc-btn " value="Update Cart">
+                    </div>
 
                 </div>
-                <div class="shipping-section"></div>
+
+                <div class="shipping-section">
+                    <h2>Order Summary</h2>
+                    <h4>Subtotal: $14.99</h4>
+                    <p>Shipping, taxes, and discounts will be calculated at checkout.</p>
+                    <button class="checkout">Place Order</button>
+                </div>
             </form>
         </div>
     </div>

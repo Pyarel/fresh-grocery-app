@@ -14,6 +14,7 @@
   <script src="https://kit.fontawesome.com/3a8639ce75.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="../Script/script.js"></script>
+  <script src="../Script/highlight.js"></script>
 
   <title>Fresh</title>
 </head>
@@ -56,7 +57,7 @@
 
           <span class="icon-text">My Basket</span>
           <div id="cartCount" data-cart_item_count="0" data-show_cnt_zero="yes" class="cart-count xhide">
-            <span class="count cartCount">0</span>
+            <span class="count cartCount" id="item-count">0</span>
             <span class="cart-text">items</span>
           </div>
         </a>
@@ -76,7 +77,7 @@
     </div>
     <hr>
     <nav>
-      <ul>
+      <ul id="nav_menu">
         <li><a href="#">Home</a></li>
         <li class="dropdown">
           <a href="#">Products <i class="fas fa-chevron-down fa-xs"></i></a>
@@ -107,7 +108,7 @@
   <!-- <div class="background-banner">
     <a href="grocery.html"><img src="../Images/banner_2.jpeg" alt="Banner Image"></a>
   </div> -->
-  <div class="banner_container">
+  <div class="banner_container" id="slides">
     <a href="produce.html"><img id="banner1" src="../Images/Home_page/banner3.jpeg" alt="banner1"></a>
     <a href="produce.html"><img id="banner2" src="../Images/Home_page/banner4.webp" alt="banner2"></a>
   </div>
