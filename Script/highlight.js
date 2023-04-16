@@ -3,14 +3,13 @@
     return this.each(function () {
       var options = $("li a");
       options
-        .css("font-family", "arial, helvetica, sans-serif")
         .css("font-weight", "bold")
         .css("text-decoration", "none")
         .css("background-color", "white")
         .css("color", "black")
         .css("width", "125px");
       options.mouseover(function () {
-        $(this).css("background-color", "#d8000c").css("color", "#white");
+        $(this).css("background-color", "#f30e19").css("color", "white");
       });
       options.mouseout(function () {
         $(this).css("background-color", "white").css("color", "black");

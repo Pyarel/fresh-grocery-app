@@ -27,13 +27,13 @@
       </div>
       <div class="search-container">
         <form action="">
-          <input type="search" id="SearchInput" name="q" value="" placeholder="Search" aria-label="Search"
+          <input type="search" id="searchInput" name="q" value="" placeholder="Search" aria-label="Search"
             autocomplete="off" class="search-bar-input">
-          <button type="submit" class="search-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20">
-              <path
-                d="M17.5,19.6a1.87,1.87,0,0,1-.782-0.574q-2.077-2.186-4.162-4.364c-0.047-.049-0.093-0.1-0.143-0.155a7.568,7.568,0,0,1-6.654,1.054A7.435,7.435,0,0,1,1.6,12.435,7.735,7.735,0,0,1,3.1,2.2a7.584,7.584,0,0,1,9.833.022,7.747,7.747,0,0,1,2.64,7.268,7.712,7.712,0,0,1-1.686,3.646c0.092,0.1.177,0.189,0.262,0.278q2.1,2.2,4.2,4.4a1.01,1.01,0,0,1,.06,1.47,2.554,2.554,0,0,1-.535.316H17.5ZM8,2.429a5.726,5.726,0,1,0,5.677,5.723A5.713,5.713,0,0,0,8,2.429Z">
-              </path>
+          <button type="submit" class="search-btn" ">
+            <svg xmlns=" http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20">
+            <path
+              d="M17.5,19.6a1.87,1.87,0,0,1-.782-0.574q-2.077-2.186-4.162-4.364c-0.047-.049-0.093-0.1-0.143-0.155a7.568,7.568,0,0,1-6.654,1.054A7.435,7.435,0,0,1,1.6,12.435,7.735,7.735,0,0,1,3.1,2.2a7.584,7.584,0,0,1,9.833.022,7.747,7.747,0,0,1,2.64,7.268,7.712,7.712,0,0,1-1.686,3.646c0.092,0.1.177,0.189,0.262,0.278q2.1,2.2,4.2,4.4a1.01,1.01,0,0,1,.06,1.47,2.554,2.554,0,0,1-.535.316H17.5ZM8,2.429a5.726,5.726,0,1,0,5.677,5.723A5.713,5.713,0,0,0,8,2.429Z">
+            </path>
             </svg>
           </button>
         </form>
@@ -47,7 +47,7 @@
             <li><a href=""><span>Register</span></a></li>
           </ul>
         </div>
-        <a href="/cart" class="cart-toggle " id="cart-number">
+        <a href="cart.html" class="cart-toggle " id="cart-number">
           <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28">
 
             <path
@@ -78,25 +78,18 @@
     <hr>
     <nav>
       <ul id="nav_menu">
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li class="dropdown">
           <a href="#">Products <i class="fas fa-chevron-down fa-xs"></i></a>
           <ul class="dropDownMenu">
             <li><a class="text-highlight" href="grocery.html">Grocery</a></li>
             <li><a class="text-highlight" href="produce.html">Produce</a></li>
-            <li><a class="text-highlight" href="#">Diary</a></li>
-
-            <li><a href="#">Item 4</a></li>
-            <li><a href="#">Item 5</a></li>
-            <li><a href="#">Item 6</a></li>
-
-            <li><a href="#">Item 7</a></li>
-            <li><a href="#">Item 8</a></li>
-            <li><a href="#">Item 9</a></li>
-
-            <li><a href="#">Item 7</a></li>
-            <li><a href="#">Item 8</a></li>
-            <li><a href="#">Item 9</a></li>
+            <li><a href="grocery.html">Ramen</a></li>
+            <li><a href="produce.html">Vegetables</a></li>
+            <li><a href="grocery.html">Jams</a></li>
+            <li><a href="produce.html">Fruits</a></li>
+            <li><a href="grocery.html">Chips</a></li>
+            <li><a href="produce.html">Organic Food</a></li>
           </ul>
         </li>
         <li><a href="#">About Us</a></li>
@@ -105,92 +98,76 @@
     </nav>
     <hr>
   </header>
-  <!-- <div class="background-banner">
-    <a href="grocery.html"><img src="../Images/banner_2.jpeg" alt="Banner Image"></a>
-  </div> -->
   <div class="banner_container" id="slides">
     <a href="produce.html"><img id="banner1" src="../Images/Home_page/banner3.jpeg" alt="banner1"></a>
     <a href="produce.html"><img id="banner2" src="../Images/Home_page/banner4.webp" alt="banner2"></a>
   </div>
-  </header>
+  <div class="main">
 
-  <main id="home_page">
-    <!-- Main for mobile-->
-    <div class="Mobile_main">
-      <h1>Shop By Categories</h1>
-      <div class="Mobile_category">
-        <input class="grocery_option" id="grocery_button" type="button" value="GROCERY"
-          onclick="window.location.href='grocery.html';"><br>
-        <input class="produce_option" id="produce_button" type="button" value="PRODUCE"
-          onclick="window.location.href='produce.html';"><br>
+    <!--for laptops only-->
+    <div class="daily_offers_container">
+      <div class="daily_offers">
+        <a href="produce.html"><img src="../Images/Home_page/chicken.jpeg" alt="chicken"></a>
+        <a href="produce.html"><img src="../Images/Home_page/Tomato.jpeg" alt="Tomato"></a>
+        <a href="produce.html"><img src="../Images/Home_page/potato.jpeg" alt="potato"></a>
+        <a href="produce.html"><img src="../Images/Home_page/fruits.jpeg" alt="potato"></a>
       </div>
     </div>
 
-    <!-- Main for others -->
-    <div class="main">
-
-      <!--for laptops only-->
-      <div class="daily_offers_container">
-        <div class="daily_offers">
-          <a href="produce.html"><img src="../Images/Home_page/chicken.jpeg" alt="chicken"></a>
-          <a href="produce.html"><img src="../Images/Home_page/Tomato.jpeg" alt="Tomato"></a>
-          <a href="produce.html"><img src="../Images/Home_page/potato.jpeg" alt="potato"></a>
-          <a href="produce.html"><img src="../Images/Home_page/fruits.jpeg" alt="potato"></a>
-        </div>
+    <!-- Categories -->
+    <h1>Shop By Categories</h1>
+    <div class="main_container">
+      <div class="category">
+        <a class="grocery_img_option" href="grocery.html"><img src="../Images/Home_page/grocery.png"></a>
+        <div id="overlay"></div>
+        <h4><a href=" " style="text-decoration:none;color:#000000;">grocery</a></h4>
+      </div>
+      <div class="category">
+        <a class="produce_img_option" href="produce.html"><img src="../Images/Home_page/produce.png"></a>
+        <h4><a href="produce.html" style="text-decoration:none;color:#000000;">produce</a></h4>
       </div>
 
-      <!-- Categories -->
-      <h1>Shop By Categories</h1>
-      <div class="main_container">
-        <div class="category">
-          <a class="grocery_img_option" href="grocery.html"><img src="../Images/Home_page/grocery.png"></a>
-          <h4><a href=" " style="text-decoration:none;color:#000000;">grocery</a></h4>
-        </div>
-        <div class="category">
-          <a class="produce_img_option" href="produce.html"><img src="../Images/Home_page/produce.png"></a>
-          <h4><a href="produce.html" style="text-decoration:none;color:#000000;">produce</a></h4>
-        </div>
-
-      </div>
     </div>
-    <footer>
-      <div class="content-wrap">
-        <div class="brand-info">
-          <div class="brand-logo">
-            <a href="index.html"><img src="../Images/logo3.jpeg" alt="Logo"></a>
-          </div>
-          <p>Making your grocery shopping a pleasant experience by offering a diverse selection of products at
-            competitive prices in a clean, friendly, and welcoming environment. </p>
-        </div>
-        <div class="store-info">
-          <h2>Our store!</h2>
-          <li>No: 58 A, East Madison</li>
-          <li>Street, Baltimore, MD, USA</li>
-          <li>4508</li>
-          <li>0000 - 123 - 456789</li>
-          <li>info@example.com</li>
+  </div>
 
+  <footer>
+    <div class="content-wrap">
+      <div class="brand-info">
+        <div class="brand-logo">
+          <a href="index.html"><img src="../Images/logo3.jpeg" alt="Logo"></a>
         </div>
-        <div class="services">
-          <h2>Information</h2>
-          <li>Home Page</li>
-          <li>Our Products</li>
-          <li>About us</li>
-          <li>Contact</li>
-          <li>Privacy Policies</li>
-        </div>
+        <p>Making your grocery shopping a pleasant experience by offering a diverse selection of products at
+          competitive prices in a clean, friendly, and welcoming environment. </p>
+      </div>
+      <div class="store-info">
+        <h2>Our store!</h2>
+        <li>No: 58 A, East Madison</li>
+        <li>Street, Baltimore, MD, USA</li>
+        <li>4508</li>
+        <li>0000 - 123 - 456789</li>
+        <li>info@example.com</li>
 
       </div>
-      <hr>
-      <div class="footer-links">
-        <ul class="contact-list">
-          <li><a href="mailto:pyarel.fer@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></a></li>
-          <li><a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a></li>
-          <li><a href="#" target="_blank"><i class="fa-brands fa-square-instagram fa-xl"></i></a></li>
-          <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
-        </ul>
+      <div class="services">
+        <h2>Information</h2>
+        <li>Home Page</li>
+        <li>Our Products</li>
+        <li>About us</li>
+        <li>Contact</li>
+        <li>Privacy Policies</li>
       </div>
-    </footer>
+
+    </div>
+    <hr>
+    <div class="footer-links">
+      <ul class="contact-list">
+        <li><a href="mailto:pyarel.fer@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa-brands fa-twitter fa-xl"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa-brands fa-square-instagram fa-xl"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 
 </html>

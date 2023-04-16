@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/3a8639ce75.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../Script/script.js"></script>
+    <script src="../Script/product.js"></script>
 
     <title>Fresh</title>
 </head>
@@ -27,13 +28,13 @@
             </div>
             <div class="search-container">
                 <form action="">
-                    <input type="search" id="SearchInput" name="q" value="" placeholder="Search" aria-label="Search"
+                    <input type="search" id="searchInput" name="q" value="" placeholder="Search" aria-label="Search"
                         autocomplete="off" class="search-bar-input">
-                    <button type="submit" class="search-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20">
-                            <path
-                                d="M17.5,19.6a1.87,1.87,0,0,1-.782-0.574q-2.077-2.186-4.162-4.364c-0.047-.049-0.093-0.1-0.143-0.155a7.568,7.568,0,0,1-6.654,1.054A7.435,7.435,0,0,1,1.6,12.435,7.735,7.735,0,0,1,3.1,2.2a7.584,7.584,0,0,1,9.833.022,7.747,7.747,0,0,1,2.64,7.268,7.712,7.712,0,0,1-1.686,3.646c0.092,0.1.177,0.189,0.262,0.278q2.1,2.2,4.2,4.4a1.01,1.01,0,0,1,.06,1.47,2.554,2.554,0,0,1-.535.316H17.5ZM8,2.429a5.726,5.726,0,1,0,5.677,5.723A5.713,5.713,0,0,0,8,2.429Z">
-                            </path>
+                    <button type="submit" class="search-btn" ">
+                <svg xmlns=" http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20">
+                        <path
+                            d="M17.5,19.6a1.87,1.87,0,0,1-.782-0.574q-2.077-2.186-4.162-4.364c-0.047-.049-0.093-0.1-0.143-0.155a7.568,7.568,0,0,1-6.654,1.054A7.435,7.435,0,0,1,1.6,12.435,7.735,7.735,0,0,1,3.1,2.2a7.584,7.584,0,0,1,9.833.022,7.747,7.747,0,0,1,2.64,7.268,7.712,7.712,0,0,1-1.686,3.646c0.092,0.1.177,0.189,0.262,0.278q2.1,2.2,4.2,4.4a1.01,1.01,0,0,1,.06,1.47,2.554,2.554,0,0,1-.535.316H17.5ZM8,2.429a5.726,5.726,0,1,0,5.677,5.723A5.713,5.713,0,0,0,8,2.429Z">
+                        </path>
                         </svg>
                     </button>
                 </form>
@@ -47,7 +48,7 @@
                         <li><a href=""><span>Register</span></a></li>
                     </ul>
                 </div>
-                <a href="/cart" class="cart-toggle " id="cart-number">
+                <a href="cart.html" class="cart-toggle " id="cart-number">
                     <svg xmlns="http://www.w3.org/2000/svg" width="27" height="28" viewBox="0 0 27 28">
 
                         <path
@@ -78,26 +79,19 @@
         </div>
         <hr>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
+            <ul id="nav_menu">
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
                     <a href="#">Products <i class="fas fa-chevron-down fa-xs"></i></a>
                     <ul class="dropDownMenu">
                         <li><a class="text-highlight" href="grocery.html">Grocery</a></li>
                         <li><a class="text-highlight" href="produce.html">Produce</a></li>
-                        <li><a class="text-highlight" href="#">Diary</a></li>
-
-                        <li><a href="#">Item 4</a></li>
-                        <li><a href="#">Item 5</a></li>
-                        <li><a href="#">Item 6</a></li>
-
-                        <li><a href="#">Item 7</a></li>
-                        <li><a href="#">Item 8</a></li>
-                        <li><a href="#">Item 9</a></li>
-
-                        <li><a href="#">Item 7</a></li>
-                        <li><a href="#">Item 8</a></li>
-                        <li><a href="#">Item 9</a></li>
+                        <li><a href="grocery.html">Ramen</a></li>
+                        <li><a href="produce.html">Vegetables</a></li>
+                        <li><a href="grocery.html">Jams</a></li>
+                        <li><a href="produce.html">Fruits</a></li>
+                        <li><a href="grocery.html">Chips</a></li>
+                        <li><a href="produce.html">Organic Food</a></li>
                     </ul>
                 </li>
                 <li><a href="#">About Us</a></li>
@@ -146,34 +140,45 @@
                         <div class="price-row">
                             <input type="number" name="price-end" id="price-end">
                         </div>
+                        <div class="price-row">
+                            <button type="button" class="filter-btn" onclick="filterPrice()">Apply Filter</button>
+                        </div>
+                        <div class="price-row">
+                            <button type="button" class="filter-btn"
+                                onclick="javascript:location.href='produce.html'">Clear Filter</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="products">
+        <div id="no-results-msg">
+            <h1>No Items matched your search</h1>
+        </div>
+        <div class="products" id="products">
             <hr>
             <div class="item">
 
                 <div class="item-image"><img src="../Images/Produce/chicken.jpg" alt="Chicken"></div>
                 <hr>
-                <div class="item-price"><b>$19<sup>.99</sup></b></div>
+                <div class="item-price">$19.99</b></div>
                 <div class="item-name">Chicken</div>
-                <div class="item-Outstock">Out of Stock</div> for chicken for potato
+                <div class="item-Outstock">Out of Stock</div>
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
                     <button class="product-count" onclick="increment(event)">+</button>
-                    <h2 id="counting">0</h2>
+                    <h2 id="counting" readonly>0</h2>
                     <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
-                <div class="add-to-cart">
-                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
-                </div>
+                <!-- <div class="add-to-cart">
+                    <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)" disabled>Notify
+                        Me!</button>
+                </div> -->
             </div>
             <div class="item">
 
                 <div class="item-image"><img src="../Images/Produce/brinjals.png" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$2<sup>.99</sup> per lb</b></div>
+                <div class="item-price">$2.99 per lb</b></div>
                 <div class="item-name">Egg plant</div>
                 <div class="item-Instock"></div>
                 <div class="count-container">
@@ -190,7 +195,7 @@
 
                 <div class="item-image"><img src="../Images/Produce/brocolli.jpg" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$5<sup>.99</sup></b></div>
+                <div class="item-price">$5.99</b></div>
                 <div class="item-name">Brocolli</div>
                 <div class="item-Instock"></div>
                 <div class="count-container">
@@ -207,7 +212,7 @@
 
                 <div class="item-image"><img src="../Images/Produce/capsicum.png" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$1.99 per lb</b></div>
+                <div class="item-price">$1.99 per lb</div>
                 <div class="item-name">Green Pepper</div>
                 <div class="item-Instock"></div>
                 <div class="count-container">
@@ -224,7 +229,7 @@
 
                 <div class="item-image"><img src="../Images/Produce/Clementines.png" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$0.99 ea</b></div>
+                <div class="item-price">$0.99 ea</div>
                 <div class="item-name">Clementines</div>
                 <div class="item-Instock"></div>
                 <div class="count-container">
@@ -241,7 +246,7 @@
 
                 <div class="item-image"><img src="../Images/Produce/Greengrapes.png" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$1.50 per lb</b></div>
+                <div class="item-price">$1.50 per lb</div>
                 <div class="item-name">Green Grapes</div>
                 <div class="item-Instock"></div>
                 <div class="count-container">
@@ -258,7 +263,7 @@
 
                 <div class="item-image"><img src="../Images/Produce/mushrooms.png" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$2.50 ea</b></div>
+                <div class="item-price">$2.50 ea</div>
                 <div class="item-name">Mushroom</div>
                 <div class="item-Instock"></div>
                 <div class="count-container">
@@ -275,24 +280,24 @@
 
                 <div class="item-image"><img src="../Images/Produce/potatoes.png" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$4.99 per lb</b></div>
+                <div class="item-price">$4.99 per lb</div>
                 <div class="item-name">Potatoes</div>
-                <div class="item-Outstock">Out of Stock</div> for chicken for potato
+                <div class="item-Outstock">Out of Stock</div>
                 <div class="count-container">
                     <!--increment() and decrement() functions on button click-->
                     <button class="product-count" onclick="increment(event)">+</button>
                     <h2 id="counting">0</h2>
                     <button class="product-count" onclick="decrement(event)">-</button>
                 </div>
-                <div class="add-to-cart">
+                <!-- <div class="add-to-cart">
                     <button type="submit" class="add-to-cart-btn" onclick="addToCart(event)">Add to Cart</button>
-                </div>
+                </div> -->
             </div>
             <div class="item">
 
                 <div class="item-image"><img src="../Images/Produce/tomatoes.png" alt="Product Image"></div>
                 <hr>
-                <div class="item-price"><b>$2.99 per lb</b></div>
+                <div class="item-price">$2.99 per lb</div>
                 <div class="item-name">Tomatoes</div>
                 <div class="item-Instock"></div>
                 <div class="count-container">

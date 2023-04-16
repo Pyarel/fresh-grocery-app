@@ -84,6 +84,8 @@ footer {
   border-bottom: 1px solid #a374ce;
   border-left: none;
   border-right: none;
+  text-align: center;
+  padding: 8px 16px 6px 16px;
 }
 .quantity-selector {
   padding: 0;
@@ -92,10 +94,8 @@ footer {
   max-width: 40px;
   border-radius: 0;
   color: #a374ce;
-
   border-left: 0;
   border-right: 0;
-
   font-size: 16px;
 }
 .qtyplus1,
@@ -111,6 +111,19 @@ footer {
   border: 1px solid #a374ce;
   background-color: transparent;
 }
+.qtyplus1:hover,
+.qtyminus1:hover {
+  width: 40px;
+  height: 40px;
+  line-height: 39px;
+  padding: 0 10px;
+  color: #fff;
+  background-color: #a374ce;
+  margin: 0;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #a374ce;
+}
 .cart__remove.close_icon {
   width: auto;
   margin: 0px 0 0 20px;
@@ -119,6 +132,8 @@ footer {
   display: flex;
   font-size: 16px;
   margin-top: -10px;
+  background: transparent;
+  border: none;
 }
 .price:last-child {
   position: absolute;
@@ -156,4 +171,14 @@ footer {
   white-space: nowrap;
   text-decoration: none;
   border: 1px #a374ce;
+}
+.empty-cart {
+  margin-left: 35%;
+}
+.empty-cart img {
+  float: none;
+  margin-left: 35%;
+}
+.empty-cart h1 {
+  font-size: 25px;
 }

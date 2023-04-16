@@ -69,7 +69,7 @@ input[type="checkbox"] {
 filter-control input:checked + label {
   color: #f9b827;
 }
-.filter-control input[type="checkbox"] + label:after {
+.filter-control input[type="radio"]:checked + label:after {
   border-radius: 50%;
   content: "";
   display: block;
@@ -96,7 +96,7 @@ filter-control input:checked + label {
   box-sizing: border-box;
 }
 
-.filter-control input:checked + label {
+.filter-control input[type="radio"]:checked + label {
   color: #f9b827;
 }
 .filter-control label {
@@ -210,4 +210,33 @@ filter-control input:checked + label {
 
 footer .content-wrap {
   height: 275px;
+}
+#no-results-msg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-left: 15%;
+  margin-top: 10%;
+}
+#no-results-msg h1 {
+  text-align: center;
+}
+.filter-btn {
+  padding: 15px;
+  margin-top: 2rem;
+  background-color: #fa7864;
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid #f87560;
+}
+.filter-btn:hover {
+  background-color: #f23d21;
+}
+.header-toggle p {
+  color: #d8000c;
+  font-weight: 500;
+  margin-left: 0;
 }
