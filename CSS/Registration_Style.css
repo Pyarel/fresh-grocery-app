@@ -1,0 +1,53 @@
+﻿body {
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+}
+
+.registration-form {
+  width: 400px;
+  margin: 4em auto 10% auto;
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  padding: 25px 25px 40px 25px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #e5e5e5;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #f85c50;
+  color: #ffffff;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #e04b3f;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}

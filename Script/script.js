@@ -1,34 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Your JavaScript code goes here
   searchInput.addEventListener("keyup", searchProducts);
-  const inStockRadio = document.querySelector('input[id="in-stock"]');
-  const outOfStockRadio = document.querySelector('input[id="out-of-stock"]');
-  const items = document.querySelectorAll(".item");
 
-  inStockRadio.addEventListener("change", filterItems);
-  outOfStockRadio.addEventListener("change", filterItems);
+  if (
+    localStorage.getItem("isLogin") != null &&
+    localStorage.getItem("isLogin") == "true"
+  ) {
+    var links = document.getElementById("isLogin");
+    children = links.children;
+    for (var i = 0; i < children.length; i++) {
+      children[i].style.display = "none";
+    }
+    // create a new p element
+    var userColumn = document.createElement("p");
+    // add some text to the new paragraph
+    var userName = document.createTextNode(localStorage.getItem("Username"));
 
-  function filterItems() {
-    // get the checked radio button
-    const selectedRadio = document.querySelector(
-      'input[name="stock-filter"]:checked'
-    );
+    // append the text node to the new paragraph
+    userColumn.appendChild(userName);
+    userColumn.style.textDecorationLine = "underline";
 
-    Array.from(items).forEach((item) => {
-      if (selectedRadio.value == "out-of-stock") {
-        if (item.querySelector(".item-Outstock")) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      } else {
-        if (item.querySelector(".item-Instock")) {
-          item.style.display = "block";
-        } else {
-          item.style.display = "none";
-        }
-      }
+    userColumn.addEventListener("click", function () {
+      // redirect to another page when the element is clicked
+      window.location.href = "editprofile.html";
     });
+
+    // append the new paragraph to the existing div element
+    document.getElementById("isLogin").appendChild(userColumn);
+    var logout = document.getElementById("logout");
+    logout.style.display = "block";
+  } else {
+    var headerLink = document.getElementById("header-links");
+    headerLink.style.alignItems = "flex-end";
   }
 });
 
@@ -128,6 +131,7 @@ function productCart(title, price, image, quantity) {
       productImage: image,
       productQuantity: quantity,
     });
+    console.log(items);
   }
   sessionStorage.setItem("products", JSON.stringify(items));
 }
@@ -163,3 +167,9 @@ $(function () {
 
   startTimer();
 });
+
+function logout() {
+  sessionStorage.clear();
+  localStorage.clear();
+  location.href = "login.html";
+}

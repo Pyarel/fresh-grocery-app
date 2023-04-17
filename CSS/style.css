@@ -85,12 +85,12 @@ header .header-toggle {
 .header-links {
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
 }
 .header-toggle p {
   color: #d8000c;
   font-weight: 500;
-  margin-left: 2em;
+  margin-left: 2.2em;
 }
 p:only-of-type {
   margin-bottom: 0;
@@ -126,9 +126,6 @@ li {
 
 .header-links {
   padding-right: 5em;
-}
-.header-toggle ul li:nth-child(2) {
-  padding: 0px 20px 0px 20px;
 }
 
 .header-links a {
@@ -177,14 +174,6 @@ header .header-links .cart-count .cart-text {
 }
 header .header-links a {
   padding: 0 0 0 25px;
-}
-header span.count.wishlist-count {
-  top: 7px;
-  right: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  left: 16%;
 }
 header .header-links .count {
   top: -2px;
@@ -370,4 +359,67 @@ hr {
 
 .item-Outstock {
   color: red;
+}
+
+/* Style for the form container */
+.form-container {
+  display: block;
+  background-color: #ffffff; /* Set background color */
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 5px; /* Add rounded corners */
+  padding: 20px; /* Add padding */
+  width: 30em; /* Set width */
+  margin: auto; /* Center the container horizontally */
+}
+
+/* Style for form inputs */
+.form-input {
+  display: block;
+  margin-bottom: 10px;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for submit button */
+.form-submit {
+  background-color: #f85c50;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Style for error messages */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Center the form vertically */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #edeadd;
+}
+#logout {
+  display: none;
+}
+.logout-btn {
+  background: transparent;
+  border: transparent;
+  font-family: "Poppins", sans-serif;
+}
+.card-header {
+  width: 32.5 em;
+  height: 50px;
+  background-color: #f85c50;
+  margin: -20px -20px 0 -20px;
 }

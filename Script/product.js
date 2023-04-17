@@ -40,6 +40,11 @@ function filterPrice() {
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
+  const inStockRadio = document.querySelector('input[id="in-stock"]');
+  const outOfStockRadio = document.querySelector('input[id="out-of-stock"]');
+
+  inStockRadio.addEventListener("change", filterItems);
+  outOfStockRadio.addEventListener("change", filterItems);
   const inStock = document.getElementById("in-stock");
   const outOfStock = document.getElementById("out-of-stock");
   radioButtons = [inStock, outOfStock];
@@ -51,3 +56,26 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+function filterItems() {
+  const items = document.querySelectorAll(".item");
+  // get the checked radio button
+  const selectedRadio = document.querySelector(
+    'input[name="stock-filter"]:checked'
+  );
+
+  Array.from(items).forEach((item) => {
+    if (selectedRadio.value == "out-of-stock") {
+      if (item.querySelector(".item-Outstock")) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    } else {
+      if (item.querySelector(".item-Instock")) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    }
+  });
+}
