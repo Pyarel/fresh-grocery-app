@@ -1,3 +1,14 @@
+// Home page slider
+$(document).ready(function () {
+  $(".bxslider").bxSlider({
+    auto: true,
+    autoControls: false,
+    stopAutoOnClick: false,
+    pager: true,
+    slideWidth: 1500,
+  });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   // Your JavaScript code goes here
   searchInput.addEventListener("keyup", searchProducts);
@@ -137,36 +148,36 @@ function productCart(title, price, image, quantity) {
 }
 
 // Slide show for banner begins
-$(function () {
-  var $slideshow = $("#slides");
-  var $slides = $slideshow.find("img");
-  var currentIndex = 0;
+// $(function () {
+//   var $slideshow = $("#slides");
+//   var $slides = $slideshow.find("img");
+//   var currentIndex = 0;
 
-  var timer = null;
-  var duration = 3000;
+//   var timer = null;
+//   var duration = 3000;
 
-  function showSlide(index) {
-    // Hide all slides
-    $slides.hide();
+//   function showSlide(index) {
+//     // Hide all slides
+//     $slides.hide();
 
-    // Show the current slide
-    $slides.eq(index).show();
-  }
+//     // Show the current slide
+//     $slides.eq(index).show();
+//   }
 
-  function nextSlide() {
-    currentIndex++;
-    if (currentIndex >= $slides.length) {
-      currentIndex = 0;
-    }
-    showSlide(currentIndex);
-  }
+//   function nextSlide() {
+//     currentIndex++;
+//     if (currentIndex >= $slides.length) {
+//       currentIndex = 0;
+//     }
+//     showSlide(currentIndex);
+//   }
 
-  function startTimer() {
-    timer = setInterval(nextSlide, duration);
-  }
+//   function startTimer() {
+//     timer = setInterval(nextSlide, duration);
+//   }
 
-  startTimer();
-});
+//   startTimer();
+// });
 
 function logout() {
   sessionStorage.clear();
