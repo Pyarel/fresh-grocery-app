@@ -109,7 +109,7 @@ function addToCart(event) {
   const price = product.querySelector(".item-price").innerText;
   const image = product.querySelector(".item-image img").getAttribute("src");
   const quantity = product.querySelector(
-    ".count-container #counting"
+    ".count-container .counting"
   ).innerText;
   let convertedQ = parseInt(quantity);
   if (convertedQ <= 0) {

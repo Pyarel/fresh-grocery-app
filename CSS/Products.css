@@ -1,3 +1,13 @@
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 
+Style for category title (breadcrumb)
+*/
 .breadcrumb {
   background-color: rgb(245, 241, 241);
   font-weight: 100;
@@ -8,9 +18,16 @@
   margin-left: 4em;
 }
 
+/*
+Style for the product container
+*/
 .product-container {
   display: flex;
 }
+
+/* 
+Style for the side navigation
+*/
 .side-nav {
   width: 30%;
   margin-top: 1em;
@@ -20,10 +37,16 @@
   font-size: 25px;
   margin-bottom: 15px;
 }
+
+/*
+Styles for filter
+*/
 .availability {
   margin-top: 1em;
 }
-
+/*
+Styles for stock availability
+*/
 .filter-control {
   display: block;
   margin-bottom: 10px;
@@ -36,14 +59,6 @@
   margin-bottom: 0;
   display: none;
   cursor: pointer;
-}
-input[type="checkbox"] {
-  text-transform: none;
-  font-weight: 400;
-  letter-spacing: 0;
-  font-size: 16px;
-  line-height: 1.5em;
-  color: #020000;
 }
 .filter-control label {
   position: relative;
@@ -83,17 +98,10 @@ filter-control input:checked + label {
   transition: all cubic-bezier(0.47, 1.21, 0.47, 1.21) 0.3s;
   -webkit-transition: all cubic-bezier(0.47, 1.21, 0.47, 1.21) 0.3s;
 }
-
 :after,
 :before {
   text-decoration: inherit;
   vertical-align: inherit;
-}
-*,
-:after,
-:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .filter-control input[type="radio"]:checked + label {
@@ -105,6 +113,10 @@ filter-control input:checked + label {
   display: block;
   font-size: 14px;
 }
+/*
+Styles for price control
+*/
+
 .price-control {
   display: grid;
   grid-template-rows: 30px 50px 1fr;
@@ -121,6 +133,38 @@ filter-control input:checked + label {
   font-size: 16px;
   text-align: left;
 }
+.filter-btn {
+  padding: 15px;
+  margin-top: 2rem;
+  background-color: #fa7864;
+  color: #fff;
+  font-weight: 700;
+  border: 1px solid #f87560;
+}
+.filter-btn:hover {
+  background-color: #f23d21;
+}
+/*
+Filter does not match search
+No results message
+*/
+#no-results-msg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin-left: 15%;
+  margin-top: 10%;
+}
+#no-results-msg h1 {
+  text-align: center;
+}
+
+/*
+Style for product container
+*/
 
 .products {
   width: 90%;
@@ -136,8 +180,6 @@ filter-control input:checked + label {
 }
 /* Style for each item */
 .item {
-  align-items: flex-end;
-  justify-content: flex-end;
   border: 1px solid rgb(227, 223, 223);
   padding: 2em 1em;
   margin: 0.5em 1em;
@@ -167,8 +209,9 @@ filter-control input:checked + label {
   text-align: center;
 }
 
-/*apply css properties to button tag*/
-
+/*
+apply css properties to Product count (Increment & decrement ) button tag
+*/
 .product-count {
   width: 2em;
   height: 2em;
@@ -178,23 +221,23 @@ filter-control input:checked + label {
   color: #f98675;
   border: 1px solid #f98675;
 }
-
 /*apply hover effect to button tag*/
-
 .product-count:hover {
   background-color: #f87560;
   color: #fff;
 }
 
 /*apply css properties to h2 tag*/
-
-#counting {
+.counting {
   color: black;
   font-size: 12px;
   border: 1px solid #f98675;
   padding: 6px 16px;
 }
 
+/*
+Add to cart button
+*/
 .add-to-cart-btn {
   background-color: #f98675;
   border: 1px solid #f98675;
@@ -207,31 +250,10 @@ filter-control input:checked + label {
   padding: 12px;
   font-weight: bold;
 }
+/*
+ Footer style
+*/
 
 footer .content-wrap {
   height: 275px;
-}
-#no-results-msg {
-  display: none;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  margin-left: 15%;
-  margin-top: 10%;
-}
-#no-results-msg h1 {
-  text-align: center;
-}
-.filter-btn {
-  padding: 15px;
-  margin-top: 2rem;
-  background-color: #fa7864;
-  color: #fff;
-  font-weight: 700;
-  border: 1px solid #f87560;
-}
-.filter-btn:hover {
-  background-color: #f23d21;
 }

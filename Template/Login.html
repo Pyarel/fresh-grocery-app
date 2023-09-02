@@ -9,18 +9,22 @@
 </head>
 
 <body>
+    <!-- Login form -->
     <form class="login-form" action="index.html" onsubmit="return validateForm()">
         <h2>Login to your account</h2>
+        <!-- Username -->
         <div>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username">
             <span id="username-error" class="error"></span>
         </div>
+        <!-- Password -->
         <div>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
             <span id="password-error" class="error"></span>
         </div>
+        <!--Buttons : Login or Register -->
         <div>
             <input type="submit" value="Login"><br><br>
             or

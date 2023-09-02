@@ -4,11 +4,16 @@ body {
   margin: 0;
 }
 
-/*
-
-header {
+/* BxSlider CSS */
+.bxslider img {
+  width: 100%;
+  height: 100%;
 }
-/* Style for logo */
+.bx-wrapper {
+  border: none;
+}
+
+/* Style for brand logo */
 .container {
   width: 100%;
   position: relative;
@@ -28,6 +33,9 @@ img {
   position: relative;
   display: block;
 }
+/*
+Style for Search form
+*/
 form {
   position: relative;
   display: flex;
@@ -72,10 +80,14 @@ svg {
   width: 21px;
   margin-top: -2px;
 }
-
 .search-container svg path {
   fill: #ffffff; /* set fill color to white */
 }
+
+/*
+ Style for Header Links
+*/
+
 header .header-links > * {
   margin: 1px;
 }
@@ -422,13 +434,4 @@ hr {
   height: 50px;
   background-color: #f85c50;
   margin: -20px -20px 0 -20px;
-}
-
-/* Slider CSS */
-.bxslider img {
-  width: 100%;
-  height: 100%;
-}
-.bx-wrapper {
-  border: none;
 }
