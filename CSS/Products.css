@@ -113,6 +113,9 @@ filter-control input:checked + label {
   display: block;
   font-size: 14px;
 }
+.item-Outstock {
+  color: red;
+}
 /*
 Styles for price control
 */
@@ -144,6 +147,7 @@ Styles for price control
 .filter-btn:hover {
   background-color: #f23d21;
 }
+
 /*
 Filter does not match search
 No results message
