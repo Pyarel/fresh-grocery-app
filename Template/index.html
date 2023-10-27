@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- bxSlider -->
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -19,6 +19,18 @@
   <script src="../Script/script.js"></script>
   <script src="../Script/highlight.js"></script>
   <title>Fresh</title>
+  <script>
+    $(document).ready(function () {
+      // Home page bx slider
+      $(".bxslider").bxSlider({
+        auto: true,
+        autoControls: false,
+        stopAutoOnClick: false,
+        pager: true,
+        slideWidth: 1500,
+      });
+    });
+  </script>
 </head>
 
 <body>

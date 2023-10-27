@@ -1,49 +1,55 @@
-$(document).ready(function () {
-  const form = document.getElementById("edit-profile-form");
-  const firstName = document.getElementById("first-name");
-  const lastName = document.getElementById("last-name");
-  const username = document.getElementById("username");
-  const email = document.getElementById("email");
-  const password = document.getElementById("password");
-  const confirmPassword = document.getElementById("confirm-password");
+// Form controls
+const form = document.getElementById("edit-profile-form");
+const firstName = document.getElementById("first-name");
+const lastName = document.getElementById("last-name");
+const username = document.getElementById("username");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const confirmPassword = document.getElementById("confirm-password");
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    if (password.value !== confirmPassword.value) {
-      alert("Passwords do not match!");
-      event.preventDefault();
-    }
+//Get the data from localStorage
+username.textContent = localStorage.getItem("Username");
+// email.textContent = localStorage.getItem("Email");
+// password.textContent = localStorage.getItem("password");
 
-    if (!validateEmail(email.value)) {
-      alert("Invalid email address!");
-      event.preventDefault();
-    }
+//Handle the form submit event
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-    if (!validatePassword(password.value)) {
-      alert(
-        "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character!"
-      );
-      event.preventDefault();
-    }
+  if (password.value !== confirmPassword.value) {
+    alert("Passwords do not match!");
+  }
 
-    alert("Data saved");
-    location.href = "index.html";
+  if (!validateEmail(email.value)) {
+    alert("Invalid email address!");
+  }
 
-    // Perform additional input validation for other fields here...
+  if (!validatePassword(password.value)) {
+    alert(
+      "Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character!"
+    );
+  }
 
-    // If all input validation checks have passed, redirect to another page
-  });
-
-  username.value = localStorage.getItem("Username");
-  email.value = localStorage.getItem("Email");
-  password.value = localStorage.getItem("password");
+  alert("Data saved");
+  location.href = "index.html";
 });
+
+/**
+ * Validate the email
+ * @param email
+ * @returns true if the email is valid, else returns false
+ */
 
 function validateEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 }
 
+/**
+ * Validate the password
+ * @param password
+ * @returns true if the password is valid, else returns false
+ */
 function validatePassword(password) {
   const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$!%*?&]{8,}$/;
   return passwordRegex.test(password);

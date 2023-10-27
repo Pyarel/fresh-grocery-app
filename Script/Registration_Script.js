@@ -1,5 +1,6 @@
 // JavaScript source code
 function validateForm() {
+  //Get the form controls
   var username = document.getElementById("username").value;
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
@@ -9,13 +10,15 @@ function validateForm() {
   var passwordError = document.getElementById("password-error");
   var confirmPasswordError = document.getElementById("confirm-password-error");
 
+  //Set the user details in local storage
   localStorage.setItem("Username", username);
   localStorage.setItem("Email", email);
   localStorage.setItem("Password", password);
 
+  //Vars
   var valid = true;
 
-  // Validate username
+  // Validate form controls
   if (username == "") {
     usernameError.innerHTML = "Please enter a username.";
     valid = false;
@@ -59,7 +62,8 @@ function validateForm() {
     confirmPasswordError.innerHTML = "";
   }
 
-  if(valid==true){
+  //Check if the form is valid
+  if (valid == true) {
     alert("You have successfully registered!!!");
   }
   return valid;
@@ -77,9 +81,12 @@ function validatePassword(password) {
   return passwordRegex.test(password);
 }
 
-// from login page to registration page when clicking on register button
-function redirectToRegistration(){
-  window.location.href="Registration.html";
+//  on click register button
+function redirectToRegistration() {
+  window.location.href = "Registration.html";
 }
 
-document.getElementById("Registration-btn").addEventList("click", redirectToRegistration);
+// Event listener for register button
+document
+  .getElementById("Registration-btn")
+  .addEventListener("click", redirectToRegistration);
