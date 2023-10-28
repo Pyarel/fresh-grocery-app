@@ -1,3 +1,4 @@
+// Filter the price
 function filterPrice() {
   let numResults = 0;
 
@@ -23,6 +24,7 @@ function filterPrice() {
   noResultsMsg.style.display = numResults === 0 ? "flex" : "none";
 }
 
+//Filter the in stock and out of stock items
 function filterItems() {
   const items = document.querySelectorAll(".item");
   // get the checked radio button
@@ -81,7 +83,7 @@ function decrement(event) {
     productCountElement.innerText = currentCount - 1;
   }
 }
-
+//Add the product to cart and update the product count
 function addToCart(event) {
   let itemCount = 0;
   const product = event.target.closest(".item");
@@ -101,7 +103,7 @@ function addToCart(event) {
     productCart(title, price, image, quantity);
   }
 }
-
+//set the product data in session storage
 function productCart(title, price, image, quantity) {
   let items = [];
   if (sessionStorage.getItem("products") != null) {
