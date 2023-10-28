@@ -33,7 +33,8 @@ function filterItems() {
   );
 
   Array.from(items).forEach((item) => {
-    console.log(item);
+    // console.log(item);
+    //Hide and show based on radio selection(stock availability)
     if (selectedRadio.value == "out-of-stock") {
       if (item.querySelector(".item-Outstock")) item.style.display = "block";
       else item.style.display = "none";
@@ -129,7 +130,7 @@ function productCart(title, price, image, quantity) {
 document.addEventListener("DOMContentLoaded", function () {
   const inStock = document.getElementById("in-stock");
   const outOfStock = document.getElementById("out-of-stock");
-
+  //Toggle the class on radio button
   const radioButtons = [inStock, outOfStock];
   for (const radioButton of radioButtons) {
     radioButton.addEventListener("change", () => {
@@ -137,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
       outStock.classList.toggle("checked", radioButton.checked);
     });
   }
+  // Add the onChange event listener to stock filter radio button
   inStock.addEventListener("change", filterItems);
   outOfStock.addEventListener("change", filterItems);
 
